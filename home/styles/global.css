@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  outline: 0 !important;
+}
+
+.b {
+  border: 3px dotted red;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 0 15vw;
+  }
+}
+header a:hover {
+  color: #20C20F !important;
+}
+header a:hover::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 120%;
+  left: 0%;
+  background-color: #20C20F;
+  height: 3px;
+}
+
+@media (max-width: 357px) {
+  .register-btn {
+    width: 75% !important;
+  }
+  .search-btn {
+    display: none;
+  }
+}
+#search-input {
+  border: 0;
+  border-bottom: 1px solid white;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#popular-courses::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#popular-courses {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.footer-menu {
+  max-height: 0;
+  transition: max-height 1s linear;
+}
+.footer-menu.open {
+  max-height: 500px;
+}
+@media (min-width: 992px) {
+  .footer-menu {
+    max-height: fit-content !important;
+    background-color: transparent !important;
+  }
+  .footer-menu p {
+    color: grey !important;
+  }
+  .footer-menu a, .footer-menu p {
+    color: grey !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .open-footer-menu {
+    background-color: transparent !important;
+  }
+  .open-footer-menu::after {
+    content: "";
+    width: 40%;
+    border-radius: 5px;
+    position: absolute;
+    top: 105%;
+    padding: 2px;
+    background-color: #212529;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.green-btn {
+  border: 2px solid #20C20F;
+  background-color: transparent;
+  color: #20C20F;
+}
+.green-btn:hover {
+  border: 2px solid white;
+  background-color: #20C20F;
+  color: white;
+}
+.green-btn:active {
+  border: 2px solid white;
+  background-color: #20C20F;
+  color: white;
+}
+
+input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+  accent-color: #20C20F;
+}
+input:not([type=checkbox]):focus {
+  outline: 2px solid #20C20F !important;
+  color: #20C20F !important;
+}
+input:not([type=checkbox]):focus + span {
+  color: #20C20F !important;
+}
+
+/*# sourceMappingURL=global.css.map */

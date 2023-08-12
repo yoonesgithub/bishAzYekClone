@@ -1,0 +1,13 @@
+$green: #20C20F;
+@mixin activeLink() {
+    color: colors.$green !important;
+    &::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: 120%;
+        left: 0%;
+        background-color: colors.$green;
+        height: 3px;
+    }
+}

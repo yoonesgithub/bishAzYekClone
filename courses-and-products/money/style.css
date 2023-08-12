@@ -1,0 +1,21 @@
+.blur-bg {
+  background-color: rgba(22, 22, 22, 0.1);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(20px);
+  transition: 300ms ease-in;
+  z-index: 1000;
+}
+
+#category-menu {
+  transform: translateX(100%);
+}
+@media (min-width: 992px) {
+  #category-menu {
+    transition: none;
+  }
+}
+#category-menu.active {
+  transform: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */

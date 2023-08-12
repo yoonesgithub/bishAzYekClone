@@ -1,0 +1,296 @@
+@use 'colors';
+@import 'mediaQuery';
+.gradient {
+    &-bg {
+        &-green {
+            background: rgb(33,67,32);
+            background: linear-gradient(90deg, rgba(33,67,32,1) 0%, rgba(46,129,37,1) 51%, rgba(32,194,15,1) 100%);
+           }
+    }
+}
+.bg {
+    &-hover {
+        &-green {
+            &:active {
+                background-color: colors.$green !important;
+            }
+            &:hover {
+                background-color: colors.$green !important;
+            }
+        }
+    }
+    &-green {
+        background-color: colors.$green;
+        &-light {
+            background-color: lighten($color: colors.$green, $amount: 30);
+        }
+        &-light-extra {
+            background-color: lighten($color: colors.$green, $amount: 50);
+        }
+    }
+    &-lg {
+        &-transparent {
+            @include lg {
+                background-color: transparent !important;
+            }
+        }
+    }
+
+}
+.text {
+    &-hover {
+        &-white {
+            &:hover {
+                color: #fff !important;
+            }
+            &:active {
+                color: #fff !important;
+            }
+        }
+        &-green {
+            &:hover {
+                color: colors.$green !important;
+            }
+            &:active {
+                color: colors.$green !important;
+            }
+        }
+    }
+    &-green {
+        color: colors.$green;
+        &-dark {
+            color: darken($color: colors.$green, $amount: 20);
+        }
+    }
+}
+.w {
+    &-15 {
+        width: 15%;
+    }
+    &-95 {
+        width: 95%;
+    }
+    &-85 {
+        width: 85%;
+    }
+    &-30 {
+        width: 30%;
+    }
+    &-mx {
+       &-90 { 
+        max-width: 99%; 
+    }
+    }
+    &-sm {
+        &-50 {
+            @include sm {
+                width: 50% !important;
+            }
+        }
+    }
+    &-md {
+        &-25 {
+            @include md {
+                width: 25% !important;
+            }
+        }
+        &-35 {
+            @include md {
+                width: 35% !important;
+            }
+        }
+    }
+    &-lg {
+        &-30 {
+            @include lg {
+                width: 30% !important;
+            }
+        }
+    }
+}
+.fs {
+    &-lg {
+        &-5 {
+            @include lg {
+                font-size: 1.1rem !important;
+            }
+        }
+    }
+}
+.fw {
+    &-lg {
+        &-bold {
+            @include lg {
+                font-weight: bolder !important; 
+            }
+        }
+    }
+}
+
+.px {
+    &-15vw {
+        padding: 0 15vw !important;
+    }
+    &-20vw {
+        padding: 0 20vw !important;
+    }
+}
+.pointer {
+    cursor: pointer;
+}
+.t {
+    &-300 {
+        transition: all linear 300ms;
+        transition-property: color, background-color,transform;
+    }
+    &-500 {
+        transition: all linear 500ms;
+        transition-property: color, background-color,transform;
+    }
+}
+.start {
+    &-80 {
+        left: 92% !important;
+    }
+}
+.vh {
+    &-70 {
+        height: 70vh ;
+    }
+    &-80 {
+        height: 80vh;
+    }
+}
+.mx {
+    &-vh {
+        &-100 {
+            max-height: 100vh;
+        }
+    }
+    &-h {
+        &-0 {
+            max-height: 0 !important;
+        }
+    }
+}
+.h {
+    &-lg {
+        &-unset {
+            @include lg {
+                height: initial !important;
+            }
+        }
+        &-100 {
+            @include lg {
+                height: 100% !important;
+            }
+        }
+    }
+}
+header {
+    .active-link {
+        @include lg {
+            color: colors.$green !important;
+            &::after {
+                content: '';
+                width: 100%;
+                position: absolute;
+                top: 120%;
+                left: 0%;
+                background-color: colors.$green;
+                height: 3px;
+            }
+        }
+    }
+}
+.p {
+    &-10 {
+        padding: 6rem;
+    }
+    &-lg {
+        &-10 {
+            @include lg {
+                padding: 6rem !important;
+            }
+        }
+    }
+    &-lg-x {
+        &-10 {
+            @include lg {
+                padding-left: 6rem !important;
+                padding-right: 6rem !important;
+            }
+        }
+    }
+}
+.top {
+    &-65 {
+        top: 65%;
+    }
+    &-lg {
+        &-55 {
+            @include lg {
+                top: 55% !important;
+            }
+        }
+    }
+}
+  .green-scroll {
+    scrollbar-width: 1px;
+    scrollbar-color: #20c20f #f8f9fa;
+    &::-webkit-scrollbar {
+        width: 1px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #f8f9fa;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #20c20f;
+        border-radius: 10px;
+        border: 5px solid #f8f9fa;
+      }
+  }
+  .hover {
+    &-up {
+        &:hover {
+            transform: translateY(-5px);
+        }
+        &:active {
+            transform: translateY(-5px);
+        }
+    }
+    &-grow {
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            transform: scale(1.1);
+        }
+    }
+  }
+  .break {
+    overflow-wrap: break-word;
+  }
+  .rotate-x-180 {
+    transform: rotateY(180deg);
+  }
+  .position {
+    &-lg {
+        &-relative {
+            @include lg {
+                position: relative !important; 
+            }
+        }
+    }
+  }
+
+  .transform {
+    &-lg {
+        &-none {
+            @include lg {
+                transform: none !important;
+            }
+        }
+    }
+  }
+  

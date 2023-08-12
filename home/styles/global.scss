@@ -1,0 +1,123 @@
+@use 'colors';
+@import 'mediaQuery';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+input {
+    outline: 0 !important;
+}
+
+.b {
+    border: 3px dotted red;
+}
+header {
+    @include lg {
+        padding: 0 15vw;
+    } 
+    a {
+        &:hover {
+            color: colors.$green !important;
+            &::after {
+                content: '';
+                width: 100%;
+                position: absolute;
+                top: 120%;
+                left: 0%;
+                background-color: colors.$green;
+                height: 3px;
+            }
+        }
+    }
+}
+
+@media (max-width: 357px) {
+    .register-btn {
+        width: 75% !important;
+    }
+    .search-btn {
+        display: none;
+    }
+}
+
+#search-input {
+    border: 0;
+    border-bottom: 1px solid white;
+    
+}
+
+/*# sourceMappingURL=style.css.map */
+/* Hide scrollbar for Chrome, Safari and Opera */
+#popular-courses::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #popular-courses {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .footer-menu {
+    max-height: 0;
+    transition: max-height 1s linear;
+    &.open {
+        max-height: 500px;
+    }
+    @include lg {
+        & p {
+            color: grey !important;
+        }
+        & a,p {
+            color: grey !important;
+        }
+        max-height: fit-content !important;
+        background-color: transparent !important;
+    }
+}
+.open-footer-menu {
+    @include lg {
+        &::after {
+            content: '';
+            width: 40%;
+            border-radius: 5px;
+            position: absolute;
+            top: 105%;
+            padding:  2px;
+            background-color: #212529;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        background-color: transparent !important ;
+    }
+}
+.green-btn {
+    border: 2px solid colors.$green;
+    background-color: transparent;
+    color: colors.$green;
+    &:hover {
+        border: 2px solid white;
+        background-color: colors.$green;
+        color: white;
+    }
+    &:active {
+        border: 2px solid white;
+        background-color: colors.$green;
+        color: white;
+    }
+}
+input {
+    &[type="checkbox"] {
+        width: 30px;
+        height: 30px;
+        accent-color: colors.$green;
+    }
+    &:not([type="checkbox"]) {
+        &:focus {
+            outline: 2px solid colors.$green !important;
+            color: colors.$green !important;
+            & + span {
+                color: colors.$green !important;
+            }
+        }
+    }
+}
