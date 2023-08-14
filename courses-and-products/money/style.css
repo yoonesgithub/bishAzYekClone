@@ -18,4 +18,10 @@
   transform: none !important;
 }
 
+input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+  accent-color: #20C20F;
+}
+
 /*# sourceMappingURL=style.css.map */

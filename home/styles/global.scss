@@ -115,11 +115,7 @@ header {
 }
 
 input {
-    &[type="checkbox"] {
-        width: 30px;
-        height: 30px;
-        accent-color: colors.$green;
-    }
+    
     &:not([type="checkbox"]) {
         &:focus {
             outline: 2px solid colors.$green !important;

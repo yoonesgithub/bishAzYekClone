@@ -239,6 +239,14 @@ header {
             }
         }
     }
+    &-lg-y {
+        &-10 {
+            @include lg {
+                padding-top: 6rem !important;
+                padding-bottom: 6rem !important;
+            }
+        }
+    }
 }
 .top {
     &-65 {

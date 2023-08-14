@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    function checkLogin(isLoggedIn) {
+        // با این قطعه کد لاگین بودن یا نبودن یوزر چک میشود و تصمیم میگیریم 
+        // به صفحه ثبت نام یا لاگین بریم
+        // یا اگر لاگین بود کلیک روی دکمه به پنل یوزر میرود
+        if(isLoggedIn) {
+            $("#login-enter-btn").attr("href", "/my-account/panel.html");
+            $("#login-enter-btn").find("p").text("حساب‌ کاربری‌ من");
+            $("#login-enter-btn").find("span").html("person");
+        } else {
+            $("#login-enter-btn").attr("href", "/login/login.html");
+            $("#login-enter-btn").find("p").text("ورود/ثبت‌نام");
+        }
+    }
+
+    checkLogin(true)
     menuFlag = false;
     $("#menu-btn").click(function () { 
         console.log($("nav"));

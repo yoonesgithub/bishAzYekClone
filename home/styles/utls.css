@@ -184,6 +184,12 @@
     padding-right: 6rem !important;
   }
 }
+@media (min-width: 992px) {
+  .p-lg-y-10 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+}
 
 .top-65 {
   top: 65%;

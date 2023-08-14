@@ -117,11 +117,6 @@ header a:hover::after {
   }
 }
 
-input[type=checkbox] {
-  width: 30px;
-  height: 30px;
-  accent-color: #20C20F;
-}
 input:not([type=checkbox]):focus {
   outline: 2px solid #20C20F !important;
   color: #20C20F !important;
