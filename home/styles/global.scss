@@ -1,11 +1,27 @@
 @use 'colors';
 @import 'mediaQuery';
+@font-face {
+    font-family: "bishazyek";
+    src: url('../../font/regular.woff2');
+}
+@font-face {
+    font-family: "bishazyek-bold";
+    font-weight: bolder;
+    src: url('../../font/bold.woff2');
+}
+.fw-bolder {
+    font-family: "bishazyek-bold";
+}
+.fw-lg-bold {
+    font-family: "bishazyek-bold";
+}
 * {
+    font-family: 'bishazyek';
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-input {
+input,select {
     outline: 0 !important;
 }
 
@@ -74,6 +90,13 @@ header {
         background-color: transparent !important;
     }
 }
+.toggling-menu {
+    max-height: 0;
+    // transition: max-height 1s linear;
+    &.open {
+        max-height: 500px;
+    }
+}
 .open-footer-menu {
     @include lg {
         &::after {
@@ -90,21 +113,7 @@ header {
         background-color: transparent !important ;
     }
 }
-.green-btn {
-    border: 2px solid colors.$green;
-    background-color: transparent;
-    color: colors.$green;
-    &:hover {
-        border: 2px solid white;
-        background-color: colors.$green;
-        color: white;
-    }
-    &:active {
-        border: 2px solid white;
-        background-color: colors.$green;
-        color: white;
-    }
-}
+
 input {
     &[type="checkbox"] {
         width: 30px;

@@ -4,9 +4,807 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../logo/msg6276305030-1230560.jpg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../home/styles/global.css">
+    <link rel="stylesheet" href="../home/styles/utls.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="../home/header.js"  ></script>
+    <script defer src="../home/footer.js"  ></script>
+    <script defer src="./app.js" ></script>
+    <link rel="icon" href="../logo/msg6276305030-1230560.jpg">
+            <!-- carousel css -->
+            <link rel="stylesheet" href="../home/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="../home/css/owl.theme.default.min.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+                <link rel="stylesheet" href="../home/css/style.css">
+            <!--  -->
     <title>Document</title>
 </head>
-<body>
-    
+<body style="background-color: #f6f6f6;" >
+    <header class="bg-light"> 
+        <div class="d-flex justify-content-between px-2  py-2 align-items-center">
+            <div class=" w-50 d-flex flex-wrap justify-content-start gap-3 align-items-center" >
+                <button class="register-btn w-75 w-sm-50 d-flex justify-content-center gap-2 align-items-center w-md-35 py-1 py-md-2  text-white border-0 rounded-1 gradient-bg-green" >
+                    <span class="material-symbols-outlined ">
+                        person_add
+                        </span>
+                        <p class="fs-6 fw-bold m-0">
+                            ورود/ ثبت نام
+                        </p>
+                </button>
+                <span id="open-search-menu" class="material-symbols-outlined pointer search-btn  fw-bold text-green-dark">
+                    search
+                </span>
+            </div>
+            <div class=" w-50 d-flex justify-content-end gap-3 align-items-center" >
+                <img class="w-50 w-md-35 pointer" src="https://www.bishtarazyek.com/wp-content/uploads/2021/09/logo.png.webp" alt="">
+                <span id="menu-btn" class="material-symbols-outlined pointer d-lg-none text-green-dark">
+                    menu
+                    </span>
+            </div>
+        </div>
+        <nav  style="display: none;" class="mt-2 w-100 p-0 d-lg-block" >
+            <ul class="list-unstyled  m-0 d-flex flex-column-reverse align-items-end pe-3 rounded-2 bg-green-light flex-lg-row py-2 gap-2  gap-lg-4   bg-lg-transparent justify-content-lg-end " >
+                <li>
+                    <a class="text-decoration-none t-300 position-relative text-dark active-link fw-medium fw-lg-bold fs-lg-5" href="/about-us/">درباره‌ و‌ ‌تماس‌باما</a>
+                </li> 
+                <li>
+                    <a class="text-decoration-none t-300 position-relative  text-dark fw-medium fw-lg-bold fs-lg-5" href="/blog/">مقالات</a>
+                </li>
+                <li>
+                    <a class="text-decoration-none t-300 position-relative  text-dark fw-medium fw-lg-bold fs-lg-5" href="/courses-and-products/">دوره‌ها‌و‌محصولات</a>
+                </li>
+                <li>
+                    <a class="text-decoration-none t-300 position-relative  text-dark fw-medium fw-lg-bold fs-lg-5" href="/free/index.html">دوره‌های‌رایگان</a>
+                </li>
+                <li>
+                    <a class="text-decoration-none t-300  position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/home/index.html">خانه</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- search menu -->
+    <div style="display: none;" id="search-menu" class="w-100 px-15vw vh-100 bg-black bg-opacity-75 fixed-top" >
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center" >
+            <input id="search-input" placeholder=". . . جستجو کردن" class="w-100 fs-bold rounded-2 text-center py-2 fs-1 text-white bg-transparent "  type="text">
+            <span id="close-search-menu" class="material-symbols-outlined pointer position-absolute text-white start-0 top-50 ms-3 fs-4 fw-bold">
+                close
+            </span>
+        </div>
+    </div>
+    <!-- content -->
+    <main>
+        <section dir="rtl" class="p-lg-x-10 py-2  px-2  row m-0 justify-content-center  align-items-start align-content-start">
+            <div  class="py-2  col-12 p-2 col-lg-10  " >
+                <p style="font-size: .9rem;" class="fw-bold  text-secondary" >خانه >> تماس باما</p>
+            </div>
+            <form  class="col-11  col-md-8 col-lg-6   position-relative"  action="">
+                <span id="search-btn" class="material-symbols-outlined pointer translate-middle-y ms-4 position-absolute top-50 start-0  fw-bold text-green-dark">
+                    search
+                </span>
+                <input placeholder="دنبال چه چیزی هستید؟" dir="rtl" type="text" class="w-100  rounded-2 bg-white px-3   border-2 border rounded-2 text-secondary fw-normal py-3">
+            </form>
+        <!-- محتوی -->
+            <div dir="rtl" class="py-5  col-12 p-2 col-lg-10 px-1 " >
+            <!-- منوی متحوی -->
+                <div class="bg-transparent position-relative shadow p-1 d-flex flex-wrap flex-lg-nowrap justify-content-center rounded-3  bg-lg-whie">
+                    <!-- متحوی درباره ما  -->
+                    <!-- دکمه انتخاب -->
+                    <div class="p-1 w-100 ">
+                        <button id="about-us-btn" class="w-100 change-btn border-0 bg-transparent  rounded-3 fw-bold py-1 fs-4">درباره ما</button>
+                    </div>
+                    <!-- محتوی در موبایل و تبلت -->
+                    <div  class="about-us-content dynamic-content px-2 w-100 d-none d-lg-none">
+                        <div class=" about-us-content py-3 dynamic-content px-2" >
+                            <p class="fw-bolder fs-5 text-green">
+                                سلام‌به‌بیشتر‌ازیکی‌های‌عزیز
+                            </p>
+                            <p class="text-dark break">
+                                ما در وبسایت بیشتر از یک نفر به آموزش مهارت‌های ارتباطی، فن بیان، سخنرانی و هر آن چیزی می‌پردازیم که برای یک زندگی موثرتر و حرفه‌ای‌تر نیاز است. با این آموزش‌ها، هرکسی می‌تواند بیشتر و موثرتر از یک نفر باشد و دنیا را جای زیباتری برای زندگی کند
+                            </p>
+                            <div style="--bs-aspect-ratio: 48%;" class="w-100 position-relative my-2 ratio ratio-16x9 rounded-2 overflow-hidden" > 
+                                <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="w-100 object-fit-cover" alt="">
+                            </div>
+                            <!-- منو های بازشونده در اینجا حلقه میخورند  -->
+                            <!--  -->
+                            <div class="min-vh-50" >
+                                <div class="py-2" >
+                                    <div class="gradient-bg-green text-white bg-white shadow open-menu open position-relative py-2 rounded-2  " >
+                                        <p dir="rtl" class="m-0 fw-bolder px-2 pointer  fs-5" >خدمات‌بیش‌از‌یک‌نفر
+                                        </p>
+                                        <span class="material-symbols-outlined fw-bold  menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                            expand_more
+                                            </span>
+                                    </div>
+                                        <div  class="overflow-hidden open t-1000 toggling-menu  " >
+                                            <div class="my-4" >
+                                                <p class="fw-bolder text-secondary">
+                                                    محصولات منحصر بفرد و بومی سازی شده:
+                                                </p>
+                                                <p class="text-secondary">
+                                                    تیم بیشتر از یک نفر تلاش می‌کند محصولات با کیفیتی را در جهت رفع کمبودهای آموزشی (به ویژه آموزش‌هایی که در هیچ مقطعی از آموزش و پرورش ما وجود ندارد و ارائه نمی‌شود) مناسب با شرایط جامعه تهیه کند و به این ترتیب سطح کیفی آموزش را گام به گام در کشور ارتقا دهد. ما می دانیم که آموزش، مهم‌ترین رکن پیشرفت و تعالی یک کشور است.
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <!--  -->
+                                <div class="py-2" >
+                                    <div class=" bg-white shadow open-menu open position-relative py-2 rounded-2  " >
+                                        <p dir="rtl" class="m-0 fw-bolder px-2 pointer  fs-5" >خدمات‌بیش‌از‌یک‌نفر
+                                        </p>
+                                        <span class="material-symbols-outlined fw-bold  menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                            expand_more
+                                            </span>
+                                    </div>
+                                        <div  class="overflow-hidden  t-1000 toggling-menu  " >
+                                            <div class="my-4" >
+                                                <p class="fw-bolder text-secondary">
+                                                    محصولات منحصر بفرد و بومی سازی شده:
+                                                </p>
+                                                <p class="text-secondary">
+                                                    تیم بیشتر از یک نفر تلاش می‌کند محصولات با کیفیتی را در جهت رفع کمبودهای آموزشی (به ویژه آموزش‌هایی که در هیچ مقطعی از آموزش و پرورش ما وجود ندارد و ارائه نمی‌شود) مناسب با شرایط جامعه تهیه کند و به این ترتیب سطح کیفی آموزش را گام به گام در کشور ارتقا دهد. ما می دانیم که آموزش، مهم‌ترین رکن پیشرفت و تعالی یک کشور است.
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <!--  -->
+                                <div class="py-2" >
+                                    <div class=" bg-white shadow open-menu open position-relative py-2 rounded-2  " >
+                                        <p dir="rtl" class="m-0 fw-bolder px-2 pointer  fs-5" >خدمات‌بیش‌از‌یک‌نفر
+                                        </p>
+                                        <span class="material-symbols-outlined fw-bold  menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                            expand_more
+                                            </span>
+                                    </div>
+                                        <div  class="overflow-hidden  t-1000 toggling-menu  " >
+                                            <div class="my-4" >
+                                                <p class="fw-bolder text-secondary">
+                                                    محصولات منحصر بفرد و بومی سازی شده:
+                                                </p>
+                                                <p class="text-secondary">
+                                                    تیم بیشتر از یک نفر تلاش می‌کند محصولات با کیفیتی را در جهت رفع کمبودهای آموزشی (به ویژه آموزش‌هایی که در هیچ مقطعی از آموزش و پرورش ما وجود ندارد و ارائه نمی‌شود) مناسب با شرایط جامعه تهیه کند و به این ترتیب سطح کیفی آموزش را گام به گام در کشور ارتقا دهد. ما می دانیم که آموزش، مهم‌ترین رکن پیشرفت و تعالی یک کشور است.
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <div class="pt-5 pb-3">
+                                <h5 class="fw-bolder mb-2 break fs-5 text-green">
+                                    چرا مجموعه بیشتر از یک نفر؟
+                                </h5>
+                                <p class="break text-dark" >
+                                    مجموعه بیشتر از یک نفر اهداف مهمی را دنبال می‌کند. آموزش ارزان و با کیفیت یکی از مهم‌ترین این اهداف است. ما هرساله در برنامه‌های آموزشی‌مان تولید چندین محصول و دوره رایگان را گنجانده‌ایم. همین حالا بیش از 20 دوره رایگان در سایت بیشتر از یک نفر موجود و در دسترس همگان است!
+                                </p>
+                                <div class="d-flex flex-nowrap px-2 justify-content-center align-items-center">
+                                    <div style="height: 1px;" class="bg-green w-100" ></div>
+                                    <p class="bg-light px-2 text-green fw-bold fs-5">برخی‌از‌همایش‌های‌بیشتر‌از‌یک‌نفر</p>
+                                    <div style="height: 1px;" class="bg-green w-100" ></div>
+                                </div>
+        
+                            </div>
+                            <div dir="ltr" class="ftco-section">
+                                <div class="container ">
+                                    <div class="row">
+                                        <!--  -->
+                                        <div class="col-md-12">
+                                            <div class="featured-carousel py-4 owl-carousel">
+                                                <div  class="item ratio ratio-16x9 p-4 ">
+                                                    <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                                 </div>
+                                                <div  class="item ratio ratio-16x9 p-4 ">
+                                                    <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                                 </div>
+                                                <div  class="item ratio ratio-16x9 p-4 ">
+                                                    <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                                 </div>
+                                                <div  class="item ratio ratio-16x9 p-4 ">
+                                                    <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                                 </div>
+                                                <div  class="item ratio ratio-16x9 p-4">
+                                                    <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                                 </div>
+                                                <div  class="item ratio ratio-16x9 p-4">
+                                                    <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- محتوی تماس باما -->
+                    <!-- دکمه انتخاب -->
+                    <div class="p-1 w-100 ">
+                        <button id="contact-us-btn" class=" w-100 change-btn  border-0 bg-transparent rounded-3 fw-bold py-1 fs-4">تماس‌با‌ما</button>
+                    </div>
+                    <!-- محتوی در موبایل و تبلت -->
+                    <div  class="contact-us-content dynamic-content d-none  px-2 w-100 d-lg-none">
+        <!-- اطلاعات تماس -->
+    <div class="d-flex justify-content-center row-gap-3 column-gap-5  flex-wrap align-items-center py-2 flex-xl-nowrap">
+        <!-- شماره تماس -->
+    <div class="rounded-2 d-flex px-3  justify-content-between align-items-center w-100 shadow bg-white py-2">
+        <div class="d-flex gap-2  align-items-center" >
+            <span class="material-symbols-outlined text-green fw-bold">
+                phone_in_talk
+                </span>
+                <p style="font-size: .9rem;" class="m-0 fw-bolder" >شماره‌تماس</p>
+        </div>
+        <p style="font-size: .9rem;" class="text-secondary m-0" >
+            ۰۹۳۹۷۳۲۲۴۷۸
+        </p>
+    </div>
+    <!-- ایمیل -->
+    <div class="rounded-2 d-flex px-3 justify-content-between align-items-center w-100 shadow bg-white p-2">
+        <div class="d-flex gap-2  align-items-center" >
+            <span class="material-symbols-outlined text-green fw-bold">
+                alternate_email
+                </span>
+                <p style="font-size: .9rem;" class="m-0 fw-bolder" >ایمیل</p>
+        </div>
+        <p style="font-size: .9rem;" class="text-secondary m-0" >
+            yooneskhatami9@gmail.com
+        </p>
+    </div>
+    <!-- پاسخگویی -->
+    <div class="rounded-2 d-flex  px-3 justify-content-between align-items-center w-100 shadow bg-white p-2">
+        <div class="d-flex gap-2  align-items-center" >
+            <span class="material-symbols-outlined text-green fw-bold">
+                phone_in_talk
+                </span>
+                <p style="font-size: .9rem;" class="m-0 fw-bolder" >ساعت‌پاسخگویی</p>
+        </div>
+        <p style="font-size: .9rem;" class="text-secondary m-0" >
+            شنبه‌تا‌چهارشنبه‌۹‌الی‌۱۸‌
+        </p>
+    </div>
+
+</div>
+<!-- ادرس -->
+<div class=" d-flex  py-2 flex-column align-items-start justify-content-start" >
+    <div class="my-2  w-100 d-flex flex-wrap   align-items-center text-green gap-2" >
+        <span class="material-symbols-outlined fw-bolder ">
+            location_on
+            </span>
+            <h5  class="text-break fw-bold" >
+                آدرس‌مجموعه‌بیشتر‌از‌یک‌نفر‌(آوای‌رسای‌سخن‌ ایرانیان)
+            </h5>
+        </div>
+        <p class="fw-bold  break  text-secondary py-3">
+            تهران–سعادت‌آباد‌–بلواردریا–خیابان‌صراف‌های‌جنوبی–خیابان۲۵غربی(قره‌تپه‌ای)–نبش‌کوچه‌شادی–پلاک۱–طبقه۵
+        </p>
+    <div class=" w-100 d-flex flex-column justify-content-start gap-4  justify-content-xl-center align-items-center align-items-xl-start  flex-xl-row flex-xl-nowrap ">
+        <div class=" w-100" >
+            <a href="#" class="w-100 d-block  ratio ratio-1x1 overflow-hidden rounded-2">
+                    <img class="object-fit-cover" src="./map/map-min.png" alt="">
+            </a>
+        </div>
+        <div class="w-100" >
+            <form  action="#" class="  px-2  py-5  gap-2 d-flex flex-column">
+                <!-- قسمت های فرم -->
+                <div class="py-1  w-100 gap-2 d-flex flex-column " >
+                    <label for="contact-us-name" class="text-green fw-bolder" >
+                        نام‌و‌نام‌خانوادگی&nbsp;  
+                        <span style="font-size: .9rem;" class="text-danger fw-normal" >(ضروری)</span> 
+                    </label>
+                    <input type="text" class="w-100 py-2 rounded-2 border border-2 text-secondary" >
+                </div>
+                <!--  -->
+                <!-- قسمت های فرم -->
+                <div class="py-1  w-100 gap-2 d-flex flex-column " >
+                    <label for="contact-us-name" class="text-green fw-bolder" >
+                        ایمیل‌شما&nbsp;
+                        <span style="font-size: .9rem;" class="text-danger fw-normal" >(ضروری)</span> 
+                    </label>
+                    <input type="text" class="w-100 py-2 rounded-2 border border-2 text-secondary" >
+                </div>
+                <!--  -->
+                <!-- قسمت های فرم -->
+                <div class="py-1  w-100 gap-2 d-flex flex-column " >
+                    <label for="contact-us-name" class="text-green fw-bolder" >
+                        توضیحات&nbsp;
+                        <span style="font-size: .9rem;" class="text-danger fw-normal" >(ضروری)</span> 
+                    </label>
+                    <textarea class="w-100 py-2 rounded-2 border border-2 text-secondary" name="" id="" cols="20"  rows="5"></textarea>
+                </div>
+                <!--  -->
+                <div class="row m-0  justify-content-end">
+                    <button class="col-6 col-xl-4 border-0 bg-secondary bg-opacity-25  py-3  rounded-3 text-white align-self-end" >
+                        ارسال پیام
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <!-- محتوی همکاران -->
+                    <!-- دکمه انتخاب -->
+                    <div class="p-1 w-100 ">
+                        <button id="colleague-btn" class="gradient-bg-green text-white w-100 change-btn  border-0 bg-transparent  rounded-3 fw-bold py-1 fs-4">همکاران‌مجموعه</button>
+                    </div>
+                    <!-- محتوی در موبایل و تبلت -->
+                    <div  class="colleague-content dynamic-content b px-2 w-100 d-lg-none">
+                        <div class="py-3 row justify-content-center m-0" >
+                            <div class="col-12 col-md-6 col-lg-4 " >
+                                <img src="./hamkaran/pb.png" class="w-100" alt="">
+                            </div>
+                            <div class="col-11">
+                                <p style="font-size: .9rem;line-height: 30px;" class="text-secondary py-3 fw-bold" >بنیانگذار هلدینگ آموزشی بیشتر از یک نفر ، پل ، آرامیا و رهبری مغز محور<br>دانشجوی رشته علوم اعصاب کاربردی از دانشگاه kcl لندن (هفدهمین دانشگاه برتر دنیا)<br>نوبسنده و مترجم 12 عنوان کتاب از جمله کتاب جعبه ابزار سخنرانی (با مقدمه‌ای از Diane Windingland) و کتاب‌های انسان 2020، ازشنبه، تیغ، مهندس خوشبختی، اسب سیاه، مهندسی آرزوها را نوشته و کتاب قله و چگونه در بیست ساعت هر چیزی را یاد بگیرید؟<br>مربی تایید شده موسسه Tiny Habits (تاینی هبیتس) آمریکا<br>برگزاری بیش از 30000 نفر-ساعت سخنرانی و کارگاه آموزشی (در مراکز مختلف از جمله دانشگاه‌های شریف، تهران و …)<br>سخنران بزرگترین سمینار آموزشی کشور<br>تجربه تولید بیش از 50 دوره آموزشی را در کوله بارش دارد!<br>حضور در بیش از 50 برنامه در رسانه ملی (شبکه یک سیما، شبکه دو سیما، شبکه استانی همدان، شبکه استانی یزد، رادیو اقتصادو…)<br>موسس باشگاه سخنرانی و فن بیان برج میلاد تهران<br>مشاور و مربی شماری از غول‌های اقتصادی کشور است…</p>
+                            </div>
+                            <div class="py-4 d-flex gap-3 justify-content-center align-items-center">
+                                <span class="material-symbols-outlined fs-2 text-secondary rotate-x-180">
+                                    approval_delegation
+                                    </span>
+                                <button class="gradient-bg-green py-3 rounded-3  px-4 shadow text-white fw-bold border-0">
+                                    دانلود رزومه پیام بهرام پور 
+                                </button>
+                                <span class="material-symbols-outlined fs-2 text-secondary">
+                                    approval_delegation
+                                    </span>
+                            </div>
+                            <!-- محل قرار گیری عکس ها  -->
+                            <div class="py-3" >
+                                <!-- قسمت های مختلف مثل مدیر همکار و غیره در اینجا حلقه میخوره  -->
+                                <div class="my-3" >
+                                    <!-- تایتل -->
+                                    <h3 class="text-center fw-bold text-dar text-break" >مدیران‌مجموعه</h3>
+                                    <!-- عکس ها  -->
+                                    <div class="justify-content-center align-items-start row py-2" >
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2 p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                            <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10" >
+                <!-- محتوی  درباره ما در دسکتاپ -->
+                <div class="about-us-content-lg py-3 dynamic-content-lg d-none  px-2" >
+                    <p class="fw-bolder fs-5 text-green">
+                        سلام‌به‌بیشتر‌ازیکی‌های‌عزیز
+                    </p>
+                    <p class="text-dark break">
+                        ما در وبسایت بیشتر از یک نفر به آموزش مهارت‌های ارتباطی، فن بیان، سخنرانی و هر آن چیزی می‌پردازیم که برای یک زندگی موثرتر و حرفه‌ای‌تر نیاز است. با این آموزش‌ها، هرکسی می‌تواند بیشتر و موثرتر از یک نفر باشد و دنیا را جای زیباتری برای زندگی کند
+                    </p>
+                    <div style="--bs-aspect-ratio: 48%;" class="w-100 position-relative my-2 ratio ratio-16x9 rounded-2 overflow-hidden" > 
+                        <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="w-100 object-fit-cover" alt="">
+                    </div>
+                    <!-- منو های بازشونده در اینجا حلقه میخورند  -->
+                    <!--  -->
+                    <div class="min-vh-50" >
+                        <div class="py-2" >
+                            <div class="gradient-bg-green text-white bg-white shadow open-menu open position-relative py-2 rounded-2  " >
+                                <p dir="rtl" class="m-0 fw-bolder px-2 pointer  fs-5" >خدمات‌بیش‌از‌یک‌نفر
+                                </p>
+                                <span class="material-symbols-outlined fw-bold  menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                    expand_more
+                                    </span>
+                            </div>
+                                <div  class="overflow-hidden open t-1000 toggling-menu  " >
+                                    <div class="my-4" >
+                                        <p class="fw-bolder text-secondary">
+                                            محصولات منحصر بفرد و بومی سازی شده:
+                                        </p>
+                                        <p class="text-secondary">
+                                            تیم بیشتر از یک نفر تلاش می‌کند محصولات با کیفیتی را در جهت رفع کمبودهای آموزشی (به ویژه آموزش‌هایی که در هیچ مقطعی از آموزش و پرورش ما وجود ندارد و ارائه نمی‌شود) مناسب با شرایط جامعه تهیه کند و به این ترتیب سطح کیفی آموزش را گام به گام در کشور ارتقا دهد. ما می دانیم که آموزش، مهم‌ترین رکن پیشرفت و تعالی یک کشور است.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!--  -->
+                        <div class="py-2" >
+                            <div class=" bg-white shadow open-menu open position-relative py-2 rounded-2  " >
+                                <p dir="rtl" class="m-0 fw-bolder px-2 pointer  fs-5" >خدمات‌بیش‌از‌یک‌نفر
+                                </p>
+                                <span class="material-symbols-outlined fw-bold  menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                    expand_more
+                                    </span>
+                            </div>
+                                <div  class="overflow-hidden  t-1000 toggling-menu  " >
+                                    <div class="my-4" >
+                                        <p class="fw-bolder text-secondary">
+                                            محصولات منحصر بفرد و بومی سازی شده:
+                                        </p>
+                                        <p class="text-secondary">
+                                            تیم بیشتر از یک نفر تلاش می‌کند محصولات با کیفیتی را در جهت رفع کمبودهای آموزشی (به ویژه آموزش‌هایی که در هیچ مقطعی از آموزش و پرورش ما وجود ندارد و ارائه نمی‌شود) مناسب با شرایط جامعه تهیه کند و به این ترتیب سطح کیفی آموزش را گام به گام در کشور ارتقا دهد. ما می دانیم که آموزش، مهم‌ترین رکن پیشرفت و تعالی یک کشور است.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!--  -->
+                        <div class="py-2" >
+                            <div class=" bg-white shadow open-menu open position-relative py-2 rounded-2  " >
+                                <p dir="rtl" class="m-0 fw-bolder px-2 pointer  fs-5" >خدمات‌بیش‌از‌یک‌نفر
+                                </p>
+                                <span class="material-symbols-outlined fw-bold  menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                    expand_more
+                                    </span>
+                            </div>
+                                <div  class="overflow-hidden  t-1000 toggling-menu  " >
+                                    <div class="my-4" >
+                                        <p class="fw-bolder text-secondary">
+                                            محصولات منحصر بفرد و بومی سازی شده:
+                                        </p>
+                                        <p class="text-secondary">
+                                            تیم بیشتر از یک نفر تلاش می‌کند محصولات با کیفیتی را در جهت رفع کمبودهای آموزشی (به ویژه آموزش‌هایی که در هیچ مقطعی از آموزش و پرورش ما وجود ندارد و ارائه نمی‌شود) مناسب با شرایط جامعه تهیه کند و به این ترتیب سطح کیفی آموزش را گام به گام در کشور ارتقا دهد. ما می دانیم که آموزش، مهم‌ترین رکن پیشرفت و تعالی یک کشور است.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <div class="pt-5 pb-3">
+                        <h5 class="fw-bolder mb-2 break fs-5 text-green">
+                            چرا مجموعه بیشتر از یک نفر؟
+                        </h5>
+                        <p class="break text-dark" >
+                            مجموعه بیشتر از یک نفر اهداف مهمی را دنبال می‌کند. آموزش ارزان و با کیفیت یکی از مهم‌ترین این اهداف است. ما هرساله در برنامه‌های آموزشی‌مان تولید چندین محصول و دوره رایگان را گنجانده‌ایم. همین حالا بیش از 20 دوره رایگان در سایت بیشتر از یک نفر موجود و در دسترس همگان است!
+                        </p>
+                        <div class="d-flex flex-nowrap px-2 justify-content-center align-items-center">
+                            <div style="height: 1px;" class="bg-green w-100" ></div>
+                            <p class="bg-light px-2 text-green fw-bold fs-5">برخی‌از‌همایش‌های‌بیشتر‌از‌یک‌نفر</p>
+                            <div style="height: 1px;" class="bg-green w-100" ></div>
+                        </div>
+
+                    </div>
+                    <div dir="ltr" class="ftco-section">
+                        <div class="container ">
+                            <div class="row">
+                                <!--  -->
+                                <div class="col-md-12">
+                                    <div class="featured-carousel py-4 owl-carousel">
+                                        <div  class="item ratio ratio-16x9 p-4 ">
+                                            <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                         </div>
+                                        <div  class="item ratio ratio-16x9 p-4 ">
+                                            <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                         </div>
+                                        <div  class="item ratio ratio-16x9 p-4 ">
+                                            <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                         </div>
+                                        <div  class="item ratio ratio-16x9 p-4 ">
+                                            <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                         </div>
+                                        <div  class="item ratio ratio-16x9 p-4">
+                                            <img src="./about-us-content/سمینار-معارفه-استادی714-1.jpg" class="rounded-2  w-100 object-fit-cover" alt="">
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class=" contact-us-content-lg dynamic-content-lg d-none  px-2" >
+                    <!-- اطلاعات تماس -->
+                    <div class="d-flex justify-content-center gap-5  flex-wrap align-items-center py-2 flex-xl-nowrap">
+                            <!-- شماره تماس -->
+                        <div class="rounded-2 d-flex px-3  justify-content-between align-items-center w-100 shadow bg-white py-2">
+                            <div class="d-flex gap-2  align-items-center" >
+                                <span class="material-symbols-outlined text-green fw-bold">
+                                    phone_in_talk
+                                    </span>
+                                    <p style="font-size: .9rem;" class="m-0 fw-bolder" >شماره‌تماس</p>
+                            </div>
+                            <p style="font-size: .9rem;" class="text-secondary m-0" >
+                                ۰۹۳۹۷۳۲۲۴۷۸
+                            </p>
+                        </div>
+                        <!-- ایمیل -->
+                        <div class="rounded-2 d-flex px-3 justify-content-between align-items-center w-100 shadow bg-white p-2">
+                            <div class="d-flex gap-2  align-items-center" >
+                                <span class="material-symbols-outlined text-green fw-bold">
+                                    alternate_email
+                                    </span>
+                                    <p style="font-size: .9rem;" class="m-0 fw-bolder" >ایمیل</p>
+                            </div>
+                            <p style="font-size: .9rem;" class="text-secondary m-0" >
+                                yooneskhatami9@gmail.com
+                            </p>
+                        </div>
+                        <!-- پاسخگویی -->
+                        <div class="rounded-2 d-flex  px-3 justify-content-between align-items-center w-100 shadow bg-white p-2">
+                            <div class="d-flex gap-2  align-items-center" >
+                                <span class="material-symbols-outlined text-green fw-bold">
+                                    phone_in_talk
+                                    </span>
+                                    <p style="font-size: .9rem;" class="m-0 fw-bolder" >ساعت‌پاسخگویی</p>
+                            </div>
+                            <p style="font-size: .9rem;" class="text-secondary m-0" >
+                                شنبه‌تا‌چهارشنبه‌۹‌الی‌۱۸‌
+                            </p>
+                        </div>
+                    
+                    </div>
+                    <!-- ادرس -->
+                    <div class=" d-flex  py-2 flex-column align-items-start justify-content-start" >
+                        <div class="my-2  w-100 d-flex align-items-center text-green gap-2" >
+                            <span class="material-symbols-outlined fw-bolder ">
+                                location_on
+                                </span>
+                                <h5 class="break fw-bold" >
+                                    آدرس‌مجموعه‌بیشتر‌از‌یک‌نفر‌(آوای‌رسای‌سخن‌ایرانیان)
+                                </h5>
+                            </div>
+                            <p class="fw-bold  break  text-secondary py-3">
+                                تهران–سعادت‌آباد‌–بلواردریا–خیابان‌صراف‌های‌جنوبی–خیابان۲۵غربی(قره‌تپه‌ای)–نبش‌کوچه‌شادی–پلاک۱–طبقه۵
+                            </p>
+                        <div class=" w-100 d-flex flex-column justify-content-start gap-4  justify-content-xl-center align-items-center align-items-xl-start  flex-xl-row flex-xl-nowrap ">
+                            <div class=" w-100" >
+                                <a href="#" class="w-100 d-block  ratio ratio-1x1 overflow-hidden rounded-2">
+                                        <img class="object-fit-cover" src="./map/map-min.png" alt="">
+                                </a>
+                            </div>
+                            <div class="w-100" >
+                                <form  action="#" class="  px-2  py-5  gap-2 d-flex flex-column">
+                                    <!-- قسمت های فرم -->
+                                    <div class="py-1  w-100 gap-2 d-flex flex-column " >
+                                        <label for="contact-us-name" class="text-green fw-bolder" >
+                                            نام‌و‌نام‌خانوادگی&nbsp;  
+                                            <span style="font-size: .9rem;" class="text-danger fw-normal" >(ضروری)</span> 
+                                        </label>
+                                        <input type="text" class="w-100 py-2 rounded-2 border border-2 text-secondary" >
+                                    </div>
+                                    <!--  -->
+                                    <!-- قسمت های فرم -->
+                                    <div class="py-1  w-100 gap-2 d-flex flex-column " >
+                                        <label for="contact-us-name" class="text-green fw-bolder" >
+                                            ایمیل‌شما&nbsp;
+                                            <span style="font-size: .9rem;" class="text-danger fw-normal" >(ضروری)</span> 
+                                        </label>
+                                        <input type="text" class="w-100 py-2 rounded-2 border border-2 text-secondary" >
+                                    </div>
+                                    <!--  -->
+                                    <!-- قسمت های فرم -->
+                                    <div class="py-1  w-100 gap-2 d-flex flex-column " >
+                                        <label for="contact-us-name" class="text-green fw-bolder" >
+                                            توضیحات&nbsp;
+                                            <span style="font-size: .9rem;" class="text-danger fw-normal" >(ضروری)</span> 
+                                        </label>
+                                        <textarea class="w-100 py-2 rounded-2 border border-2 text-secondary" name="" id="" cols="20"  rows="5"></textarea>
+                                    </div>
+                                    <!--  -->
+                                    <div class="row m-0  justify-content-end">
+                                        <button class="col-6 col-xl-4 border-0 bg-secondary bg-opacity-25  py-3  rounded-3 text-white align-self-end" >
+                                            ارسال پیام
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- محتوی همکاران -->
+                <div class="colleague-content-lg dynamic-content-lg d-none py-5  d-lg-block  px-2" >
+                    <div class="py-3 row justify-content-center m-0" >
+                        <div class="col-12 col-md-6 col-lg-4 " >
+                            <img src="./hamkaran/pb.png" class="w-100" alt="">
+                        </div>
+                        <div class="col-11">
+                            <p style="font-size: .9rem;line-height: 30px;" class="text-secondary py-3 fw-bold" >بنیانگذار هلدینگ آموزشی بیشتر از یک نفر ، پل ، آرامیا و رهبری مغز محور<br>دانشجوی رشته علوم اعصاب کاربردی از دانشگاه kcl لندن (هفدهمین دانشگاه برتر دنیا)<br>نوبسنده و مترجم 12 عنوان کتاب از جمله کتاب جعبه ابزار سخنرانی (با مقدمه‌ای از Diane Windingland) و کتاب‌های انسان 2020، ازشنبه، تیغ، مهندس خوشبختی، اسب سیاه، مهندسی آرزوها را نوشته و کتاب قله و چگونه در بیست ساعت هر چیزی را یاد بگیرید؟<br>مربی تایید شده موسسه Tiny Habits (تاینی هبیتس) آمریکا<br>برگزاری بیش از 30000 نفر-ساعت سخنرانی و کارگاه آموزشی (در مراکز مختلف از جمله دانشگاه‌های شریف، تهران و …)<br>سخنران بزرگترین سمینار آموزشی کشور<br>تجربه تولید بیش از 50 دوره آموزشی را در کوله بارش دارد!<br>حضور در بیش از 50 برنامه در رسانه ملی (شبکه یک سیما، شبکه دو سیما، شبکه استانی همدان، شبکه استانی یزد، رادیو اقتصادو…)<br>موسس باشگاه سخنرانی و فن بیان برج میلاد تهران<br>مشاور و مربی شماری از غول‌های اقتصادی کشور است…</p>
+                        </div>
+                        <div class="py-4 d-flex gap-3 justify-content-center align-items-center">
+                            <span class="material-symbols-outlined fs-2 text-secondary rotate-x-180">
+                                approval_delegation
+                                </span>
+                            <button class="gradient-bg-green py-3 rounded-3  px-4 shadow text-white fw-bold border-0">
+                                دانلود رزومه پیام بهرام پور 
+                            </button>
+                            <span class="material-symbols-outlined fs-2 text-secondary">
+                                approval_delegation
+                                </span>
+                        </div>
+                        <!-- محل قرار گیری عکس ها  -->
+                        <div class="py-3" >
+                            <!-- قسمت های مختلف مثل مدیر همکار و غیره در اینجا حلقه میخوره  -->
+                            <div class="my-3" >
+                                <!-- تایتل -->
+                                <h3 class="text-center fw-bold text-dar text-break" >مدیران‌مجموعه</h3>
+                                <!-- عکس ها  -->
+                                <div class="justify-content-center align-items-start row py-2" >
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2 p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12 col-md-3 col-lg-4 col-xl-2  p-2">
+                                        <img src="./hamkaran/حاجی-پور.png" class="w-100" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <!-- footer -->
+    <footer  class="bg-light row m-0  justify-content-center align-items-start pt-5">
+        <div class=" col-11 col-md-10 ">
+            <div class="w-100 m-0  row flex-lg-row-reverse">
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white bg-lg-transparent open-footer-menu position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bolder  pointer fs-5 text-dark" >شبکه های اجتماعی
+                            </p>
+                            <span class="material-symbols-outlined d-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white overflow-hidden  bg-lg-transparent text-center   " >
+                                <ul class="list-unstyled  justify-content-center align-items-center  d-flex flex-row gap-3 my-3">
+                                    <a class="text-decoration-none" href="">
+                                        <li style="width: 50px; height: 50px;" class=" rounded-circle bg-dark text-white d-flex justify-content-center align-items-center" >
+                                            <span class="material-symbols-outlined">
+                                                public
+                                                </span>
+                                        </li>
+                                    </a>
+                                </ul>
+                                <div class=" justify-content-between align-items-start row m-0">
+                                    <img class="col-4" src="../home/footer/enamad-copy-e1670680559482.png" alt="">
+                                    <img class="col-4" src="../home/footer/download.svg" alt="">
+                                    <img class="col-4" src="../home/footer/enamad-copy-e1670680559482.png" alt="">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bolder  pointer text-dark fs-5" >صفحات‌مهم‌سایت
+                            </p>
+                            <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
+                                <ul class="list-unstyled d-flex flex-column gap-4 my-3">
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bold pointer text-dark fs-5" >آدرس ما
+                            </p>
+                            <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
+                                <h5 class="mt-2 fw-bold" >نشانی دفتر</h5>
+                                <p class="text-green fw-bold" >تهران – سعادت آباد – بلوار دریا – خیابان صراف های جنوبی – خیابان ۲۵ غربی (قره تپه‌ای) – نبش کوچه شادی – پلاک ۱ – طبقه ۵</p>
+                                <div class="d-flex justify-content-center gap-1 align-items-center" >
+                                    <p class="text-green fw-bold" >
+                                        کد پستی: ۱۹۹۸۸۶۷۱۸۶
+                                    </p>
+                                    <p class="text-green fw-bold" >
+                                        <span>تلفن:</span>
+                                        <a class="text-decoration-none text-green" href="tel:02191090908">۰۲۱۹۱۰۹۰۹۰۸</a>
+                                    </p>
+                                </div>
+                                <p class="text-green fw-bold" >ایمیل:site@bishtarazyek.com</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bolder pointer text-dark fs-5" >مجموعه‌های‌همکار
+                            </p>
+                            <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
+                                <ul class="list-unstyled d-flex flex-column gap-3 my-3">
+                                    <li>
+                                        <a class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                    <li>
+                                        <a  class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                    <li>
+                                        <a  class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                    <li>
+                                        <a  class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 bg-green py-2">
+            <p class="text-center fw-bold fs-5 m-0 text-white">
+                استفاده از سایت مشروط بر قبول توافق‌نامه کاربری و حفظ حریم شخصی است. 
+            </p>
+        </div>
+    </footer>
+    <script src="../home/js/jquery.min.js"></script>
+<script src="../home/js/popper.js"></script>
+<script src="../home/js/bootstrap.min.js"></script>
+<script src="../home/js/owl.carousel.min.js"></script>
+<script src="../home/js/main.js"></script>
 </body>
 </html>

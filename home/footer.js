@@ -4,4 +4,5 @@ $(document).ready(function () {
         ($(e.currentTarget).find("span").text() == "remove") ? ($(e.currentTarget).find("span").text("expand_more")) : ($(e.currentTarget).find("span").text("remove"))  
         $(e.currentTarget).next().first().toggleClass("open");
     })
+
 });

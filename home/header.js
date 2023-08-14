@@ -1,12 +1,13 @@
 $(document).ready(function () {
     menuFlag = false;
     $("#menu-btn").click(function () { 
+        console.log($("nav"));
         if(menuFlag) {
             $("nav").slideUp()
             $("#menu-btn").text("menu")
         } else {
             $("#menu-btn").text("close")
-            $("nav").slideDown()
+            $("header nav").slideDown();
         }
         menuFlag = !menuFlag
     });

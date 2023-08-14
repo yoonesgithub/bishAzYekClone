@@ -1,37 +1,43 @@
-@use 'colors';
+@import 'colors';
 @import 'mediaQuery';
+       
 .gradient {
     &-bg {
         &-green {
-            background: rgb(33,67,32);
-            background: linear-gradient(90deg, rgba(33,67,32,1) 0%, rgba(46,129,37,1) 51%, rgba(32,194,15,1) 100%);
-           }
+            @include green-gradient()
+            }
     }
 }
+
 .bg {
     &-hover {
         &-green {
             &:active {
-                background-color: colors.$green !important;
+                @include green-gradient()
             }
             &:hover {
-                background-color: colors.$green !important;
+            @include green-gradient()
             }
         }
     }
     &-green {
-        background-color: colors.$green;
+        background-color: $green;
         &-light {
-            background-color: lighten($color: colors.$green, $amount: 30);
+            background-color: lighten($color: $green, $amount: 30);
         }
         &-light-extra {
-            background-color: lighten($color: colors.$green, $amount: 50);
+            background-color: lighten($color: $green, $amount: 50);
         }
     }
     &-lg {
         &-transparent {
             @include lg {
                 background-color: transparent !important;
+            }
+        }
+        &-white {
+            @include lg {
+                background-color: white !important;
             }
         }
     }
@@ -49,17 +55,17 @@
         }
         &-green {
             &:hover {
-                color: colors.$green !important;
+                color: $green !important;
             }
             &:active {
-                color: colors.$green !important;
+                color: $green !important;
             }
         }
     }
     &-green {
-        color: colors.$green;
+        color: $green;
         &-dark {
-            color: darken($color: colors.$green, $amount: 20);
+            color: darken($color: $green, $amount: 20);
         }
     }
 }
@@ -141,11 +147,15 @@
 .t {
     &-300 {
         transition: all linear 300ms;
-        transition-property: color, background-color,transform;
+        transition-property: color, background-color,transform,max-height;
     }
     &-500 {
         transition: all linear 500ms;
-        transition-property: color, background-color,transform;
+        transition-property: color, background-color,transform,max-height;
+    }
+    &-1000 {
+        transition: all linear 1s;
+        transition-property: color, background-color,transform,max-height;
     }
 }
 .start {
@@ -173,6 +183,13 @@
         }
     }
 }
+.min {
+    &-vh {
+        &-50 {
+            min-height: 50vh;
+        }
+    }
+}
 .h {
     &-lg {
         &-unset {
@@ -190,14 +207,14 @@
 header {
     .active-link {
         @include lg {
-            color: colors.$green !important;
+            color: $green !important;
             &::after {
                 content: '';
                 width: 100%;
                 position: absolute;
                 top: 120%;
                 left: 0%;
-                background-color: colors.$green;
+                background-color: $green;
                 height: 3px;
             }
         }
@@ -293,4 +310,18 @@ header {
         }
     }
   }
-  
+  .green-btn {
+    border: 2px solid $green;
+    background-color: transparent;
+    color:  $green;
+    &:hover {
+        border: none !important;
+        @include green-gradient();
+        color: white;
+    }
+    &:active {
+        border: none !important;
+        @include green-gradient();
+        color: white;
+    }
+}

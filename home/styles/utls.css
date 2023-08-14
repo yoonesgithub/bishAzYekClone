@@ -4,10 +4,12 @@
 }
 
 .bg-hover-green:active {
-  background-color: #20C20F !important;
+  background: rgb(33, 67, 32);
+  background: linear-gradient(90deg, rgb(33, 67, 32) 0%, rgb(46, 129, 37) 51%, rgb(32, 194, 15) 100%);
 }
 .bg-hover-green:hover {
-  background-color: #20C20F !important;
+  background: rgb(33, 67, 32);
+  background: linear-gradient(90deg, rgb(33, 67, 32) 0%, rgb(46, 129, 37) 51%, rgb(32, 194, 15) 100%);
 }
 .bg-green {
   background-color: #20C20F;
@@ -21,6 +23,11 @@
 @media (min-width: 992px) {
   .bg-lg-transparent {
     background-color: transparent !important;
+  }
+}
+@media (min-width: 992px) {
+  .bg-lg-white {
+    background-color: white !important;
   }
 }
 
@@ -104,11 +111,15 @@
 
 .t-300 {
   transition: all linear 300ms;
-  transition-property: color, background-color, transform;
+  transition-property: color, background-color, transform, max-height;
 }
 .t-500 {
   transition: all linear 500ms;
-  transition-property: color, background-color, transform;
+  transition-property: color, background-color, transform, max-height;
+}
+.t-1000 {
+  transition: all linear 1s;
+  transition-property: color, background-color, transform, max-height;
 }
 
 .start-80 {
@@ -127,6 +138,10 @@
 }
 .mx-h-0 {
   max-height: 0 !important;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
 }
 
 @media (min-width: 992px) {
@@ -226,6 +241,24 @@
   .transform-lg-none {
     transform: none !important;
   }
+}
+
+.green-btn {
+  border: 2px solid #20C20F;
+  background-color: transparent;
+  color: #20C20F;
+}
+.green-btn:hover {
+  border: none !important;
+  background: rgb(33, 67, 32);
+  background: linear-gradient(90deg, rgb(33, 67, 32) 0%, rgb(46, 129, 37) 51%, rgb(32, 194, 15) 100%);
+  color: white;
+}
+.green-btn:active {
+  border: none !important;
+  background: rgb(33, 67, 32);
+  background: linear-gradient(90deg, rgb(33, 67, 32) 0%, rgb(46, 129, 37) 51%, rgb(32, 194, 15) 100%);
+  color: white;
 }
 
 /*# sourceMappingURL=utls.css.map */

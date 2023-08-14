@@ -1,10 +1,28 @@
+@font-face {
+  font-family: "bishazyek";
+  src: url("../../font/regular.woff2");
+}
+@font-face {
+  font-family: "bishazyek-bold";
+  font-weight: bolder;
+  src: url("../../font/bold.woff2");
+}
+.fw-bolder {
+  font-family: "bishazyek-bold";
+}
+
+.fw-lg-bold {
+  font-family: "bishazyek-bold";
+}
+
 * {
+  font-family: "bishazyek";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-input {
+input, select {
   outline: 0 !important;
 }
 
@@ -75,6 +93,13 @@ header a:hover::after {
   }
 }
 
+.toggling-menu {
+  max-height: 0;
+}
+.toggling-menu.open {
+  max-height: 500px;
+}
+
 @media (min-width: 992px) {
   .open-footer-menu {
     background-color: transparent !important;
@@ -90,22 +115,6 @@ header a:hover::after {
     left: 50%;
     transform: translateX(-50%);
   }
-}
-
-.green-btn {
-  border: 2px solid #20C20F;
-  background-color: transparent;
-  color: #20C20F;
-}
-.green-btn:hover {
-  border: 2px solid white;
-  background-color: #20C20F;
-  color: white;
-}
-.green-btn:active {
-  border: 2px solid white;
-  background-color: #20C20F;
-  color: white;
 }
 
 input[type=checkbox] {

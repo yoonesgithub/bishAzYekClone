@@ -12,7 +12,7 @@ $(document).ready(function () {
         "./252-history-of-js.mp4",
         "./Y2Mate.is - Mortal Kombat 1 - Official Announcement Trailer-UZ6eFEjFfJ0-1080p-1658246535765.mp4"
     ]
-    let sliderTimer = 5000;
+    let sliderTimer = 500;
     let photoIndex = 5;
     function getSliderDuration() {
         return new Promise((res) => {
@@ -21,7 +21,7 @@ $(document).ready(function () {
     }
     getSliderDuration().then(result => {
         setInterval(() => {
-            // slideForward("#slider-img",getPhoto);
+            slideForward("#slider-img",getPhoto);
             // slideForward("#slider-video",getVideo)
         }, result);
     })

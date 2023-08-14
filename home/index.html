@@ -15,10 +15,16 @@
     <script defer src="./slider.js"  ></script>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/utls.css">
+    <!-- carousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/style.css">
+    <!--  -->
     <title>Home</title>
 </head>
    
-<body class="overflow-hiddene" >
+<body class="overflow-hiddene bg-light" >
     <!-- header -->
     <header class="bg-light"> 
         <div class="d-flex justify-content-between px-2  py-2 align-items-center">
@@ -27,7 +33,7 @@
                     <span class="material-symbols-outlined ">
                         person_add
                         </span>
-                        <p class="fs-6 m-0">
+                        <p class="fs-6 fw-bold  m-0">
                             ورود/ ثبت نام
                         </p>
                 </button>
@@ -51,7 +57,7 @@
                     <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/blog/">مقالات</a>
                 </li>
                 <li>
-                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/courses-and-products/">دوره‌ها‌و‌محصولات</a>
+                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium  fw-lg-bold fs-lg-5" href="/courses-and-products/">دوره‌ها‌و‌محصولات</a>
                 </li>
                 <li>
                     <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/free/index.html">دوره‌های‌رایگان</a>
@@ -89,15 +95,16 @@
         </div>
     </div>
    </section>
+   <!-- search -->
    <!-- category -->
-   <section class="row m-0   bg-light py-2 align-content-start  gap-5  py-md-5 align-items-start justify-content-center" >
-    <div class="col-11 col-md-8 col-lg-5 bg-white py-2 border-2 border rounded-2 d-flex justify-content-between align-items-center border-1" >
-        <span id="search-btn" class="material-symbols-outlined pointer   fw-bold text-green-dark">
-            search
-        </span>
-        <input placeholder="دنبال چه چیزی هستید؟" dir="rtl" type="text" class="w-100 border-0 bg-transparent text-secondary fw-normal  px-2 py-2">
-    </div>
-    <div class="col-11 col-md-8   col-lg-7 " >
+   <section class="row m-0  bg-light py-2 align-content-start  gap-5  py-md-5 align-items-start justify-content-center" >
+       <div class="col-11  col-md-8 col-lg-5 bg-white py-2 border-2 border rounded-2 d-flex justify-content-between align-items-center border-1" >
+           <span id="search-btn" class="material-symbols-outlined pointer   fw-bold text-green-dark">
+               search
+            </span>
+            <input placeholder="دنبال چه چیزی هستید؟" dir="rtl" type="text" class="w-100 border-0 bg-transparent text-secondary fw-normal  px-2 py-2">
+        </div> 
+    <div class="col-11 col-md-8  d-lg-none col-lg-7 " >
         <div class="w-100 h-100 green-scroll overflow-auto  justify-content-start px-lg-5 py-lg-5   flex-wrap flex-lg-nowrap m-0 d-flex">
             <div class="col-6 col-lg-4  p-2 pointer " >
                 <div class="bg-white shadow bg-hover-green hover-up text-hover-white t-300  w-100 rounded-2 text-green">
@@ -162,29 +169,115 @@
         </div>
     </div>
    </section>
+   <!-- category carousel for lg width -->
+   <section class="ftco-section d-none d-lg-block ">
+    <div class="container ">
+        <div class="row">
+            <!--  -->
+            <div class="col-md-12">
+                <div class="featured-carousel py-4 owl-carousel">
+                    <div  class="item t-300 w-85 p-3">
+                        <div class="work t-300 hover-up ">
+                            <div class="bg-white shadow bg-hover-green text-hover-white t-300  w-100 rounded-2 text-green">
+                            <a style="color: unset;" href="/courses-and-products/money/index.html" class=" text-decoration-none w-100 h-100 d-block">
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-start p-1 ">
+                            <span style="font-size: 5rem;" class="material-symbols-outlined t-300 fw-bold">
+                                attach_money
+                                </span>
+                                <p  class="fw-bold t-300 pt-2 ">سواد‌مالی‌و‌کسب‌و‌کار</p>
+                            </div>
+                            </a>
+                        </div>
+                     </div>
+                 </div>
+                    <div  class="item t-300 w-85 p-3">
+                        <div class="work t-300 hover-up ">
+                            <div class="bg-white shadow bg-hover-green text-hover-white t-300  w-100 rounded-2 text-green">
+                            <a style="color: unset;" href="/courses-and-products/money/index.html" class=" text-decoration-none w-100 h-100 d-block">
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-start p-1 ">
+                            <span style="font-size: 5rem;" class="material-symbols-outlined t-300 fw-bold">
+                                attach_money
+                                </span>
+                                <p  class="fw-bold t-300 pt-2 ">سواد‌مالی‌و‌کسب‌و‌کار</p>
+                            </div>
+                            </a>
+                        </div>
+                     </div>
+                 </div>
+                    <div  class="item t-300 w-85 p-3">
+                        <div class="work t-300 hover-up ">
+                            <div class="bg-white shadow bg-hover-green text-hover-white t-300  w-100 rounded-2 text-green">
+                            <a style="color: unset;" href="/courses-and-products/money/index.html" class=" text-decoration-none w-100 h-100 d-block">
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-start p-1 ">
+                            <span style="font-size: 5rem;" class="material-symbols-outlined t-300 fw-bold">
+                                attach_money
+                                </span>
+                                <p  class="fw-bold t-300 pt-2 ">سواد‌مالی‌و‌کسب‌و‌کار</p>
+                            </div>
+                            </a>
+                        </div>
+                     </div>
+                 </div>
+                    <div  class="item t-300 w-85 p-3">
+                        <div class="work t-300 hover-up ">
+                            <div class="bg-white shadow bg-hover-green text-hover-white t-300  w-100 rounded-2 text-green">
+                            <a style="color: unset;" href="/courses-and-products/money/index.html" class=" text-decoration-none w-100 h-100 d-block">
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-start p-1 ">
+                            <span style="font-size: 5rem;" class="material-symbols-outlined t-300 fw-bold">
+                                attach_money
+                                </span>
+                                <p  class="fw-bold t-300 pt-2 ">سواد‌مالی‌و‌کسب‌و‌کار</p>
+                            </div>
+                            </a>
+                        </div>
+                     </div>
+                 </div>
+                    <div  class="item t-300 w-85 p-3">
+                        <div class="work t-300 hover-up ">
+                            <div class="bg-white shadow bg-hover-green text-hover-white t-300  w-100 rounded-2 text-green">
+                            <a style="color: unset;" href="/courses-and-products/money/index.html" class=" text-decoration-none w-100 h-100 d-block">
+                            <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-start p-1 ">
+                            <span style="font-size: 5rem;" class="material-symbols-outlined t-300 fw-bold">
+                                attach_money
+                                </span>
+                                <p  class="fw-bold t-300 pt-2 ">سواد‌مالی‌و‌کسب‌و‌کار</p>
+                            </div>
+                            </a>
+                        </div>
+                     </div>
+                 </div>
+                 
+                
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+   <!--  -->
    <!-- free courses  -->
    <section class=" row flex-md-row-reverse m-0 ">
     <div class="col-12 d-flex justify-content-center align-items-center col-md-6 ">
         <img class="w-50 ratio ratio-1x1" src="./—Pngtree—green gift box with watercolor_6492497.png" alt="">
     </div>
     <div class="col-12 d-flex flex-column align-items-center align-items-md-end gap-3 justify-content-md-center col-md-6 ">
-        <h2 class="text-green text-center  text-md-end ">محصولات‌‌رایگان‌بیشتراز‌یک‌‌نفر</h2>
+        <h1 class="text-green text-center break text-break text-md-end ">محصولات‌‌رایگان‌بیشتراز‌یک‌‌نفر</h1>
         <p class="text-green fs-5   w-75 ms-md-auto text-center text-md-end ">
             رسالت اصلی ما در بیشتر از یک نفر این است که دنیا را به جای بهتری برای زندگی تبدیل کنیم؛ برای همین، بسیاری از دوره‌هایمان را رایگان کرده‌ایم!
         </p>
     </div>
    </section>
-   <section class="bg-light" >
+   <section class="bg-light py-2" >
     <div class="w-100 vh-100 justify-content-center m-0 row px-2 py-3 py-md-5 ">
         <div class="col-lg-8 " >
-            <h2 class="popular-title text-green-dark mb-lg-5 mb-2" dir="rtl" >
+            <h1 class="popular-title text-break text-green-dark mb-lg-5 mb-2" dir="rtl" >
                 <span class="material-symbols-outlined fw-bold fs-2">
                     radio_button_checked
                     </span>
                 محبوب‌ترین‌دوره‌ها
-            </h2>
-            <div id="popular-courses" class="popular-courses row position-relative  m-0  mx-vh-100 align-items-start flex-nowrap w-100 gap-1 px-2 overflow-auto py-2">
-                <div class="rounded-4 py-2 border border-2 col-12 col-md-4" > 
+            </h1>
+            <div id="popular-courses" class="popular-courses b  row position-relative  mx-0  mx-vh-100 align-items-start flex-nowrap w-100 gap-2 mb-4  px-2 overflow-auto py-2">
+                <div class="rounded-4 py-2 border border-2 col-12 col-md-6 col-xl-4" > 
                     <div class="w-100 d-flex   flex-column gap-2 justify-content-start align-items-center align-content-center" >
                         <img class="w-mx-90" src="./popular/دگرگونی.png" alt="">
                         <h4 class="text-secondary" >دوره‌جامع‌دگرگونی</h4>
@@ -193,7 +286,7 @@
                             <p>قیمت 3.400,000 تومان</p>
                             <div class="w-100 d-flex flex-row-reverse gap-1" >
                                 <button class="w-75 rounded-3 py-2 px-3 border-0 text-white gradient-bg-green d-flex justify-content-end gap-2  align-items-center">
-                                    <p class="m-0" >افزودن به سبد خرید</p>
+                                    <p class="m-0 fw-bold" >افزودن به سبد خرید</p>
                                     <span class="material-symbols-outlined d-lg-none">
                                         shopping_basket
                                         </span>
@@ -206,7 +299,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="rounded-4 py-2 border border-2 col-12 col-md-4" >
+                <div class="rounded-4 pb-2  border border-2 col-12 col-md-6 col-xl-4" >
                     <div class="w-100 d-flex   flex-column gap-2 justify-content-start align-items-center align-content-center" >
                         <img class="w-mx-90" src="./popular/شهامت.png" alt="">
                         <h4 class="text-secondary" >دوره‌شهامت</h4>
@@ -215,7 +308,7 @@
                             <p>قیمت 1,490,000 تومان</p>
                             <div class="w-100 d-flex flex-row-reverse gap-1" >
                                 <button class="w-75 rounded-3 py-2 px-3 border-0 text-white gradient-bg-green d-flex justify-content-end gap-2  align-items-center">
-                                    <p class="m-0" >افزودن به سبد خرید</p>
+                                    <p class="m-0 fw-bold" >افزودن به سبد خرید</p>
                                     <span class="material-symbols-outlined d-lg-none">
                                         shopping_basket
                                         </span>
@@ -228,7 +321,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="rounded-4 py-2 border border-2 col-12 col-md-4" >
+                <div class="rounded-4 py-2 border border-2 col-md-6 col-xl-4" >
                     <div class="w-100 d-flex   flex-column gap-2 justify-content-start align-items-center align-content-center" >
                         <img class="w-mx-90" src="./popular/پول-1.png" alt="">
                         <h4 class="text-secondary" >دوره‌جامع‌پول</h4>
@@ -237,7 +330,7 @@
                             <p>قیمت 1,900,000 تومان</p>
                             <div class="w-100 d-flex flex-row-reverse gap-1" >
                                 <button class="w-75 rounded-3 py-2 px-3 border-0 text-white gradient-bg-green d-flex justify-content-end gap-2  align-items-center">
-                                    <p class="m-0" >افزودن به سبد خرید</p>
+                                    <p class="m-0 fw-bold" >افزودن به سبد خرید</p>
                                     <span class="material-symbols-outlined d-lg-none">
                                         shopping_basket
                                         </span>
@@ -255,19 +348,19 @@
     </div>
    </section>
    <!-- all courses -->
-   <section class=" w-100 m-0 pb-4  row justify-content-center gap-4 align-items-center bg-light" >
+   <section class=" w-100   m-0 pb-4  row justify-content-center gap-4 align-items-center bg-light" >
     <img class="col-10 col-sm-4" src="./IMG_20230718_130254_754.png" alt="">
     <img class="col-10 col-sm-4" src="./بنر-وسط-صفحه-قبوتکمپ-دسکتاپ.png" alt="">
    </section>
    <!-- new courses -->
    <section class="w-100 m-0   py-4 py-3 row justify-content-center  align-items-center bg-light" > 
     <div class="col-10  overflow-hidden mx  col-lg-8">
-        <h3 dir="rtl" class="w-100 text-green-dark mb-lg-4  mb-2">
+        <h1 dir="rtl" class="w-100 break fw-bold text-green-dark mb-lg-4  mb-2">
             <span class="material-symbols-outlined fw-bold fs-2">
                 radio_button_checked
             </span>
             جدید‌ترین‌دوره‌ها 
-            </h3>
+            </h1>
             <!-- new courses mobile -->
             <div class=" d-flex w-100 py-3 px-2 d-xl-none  overflow-auto" >
                 <img class="ratio ratio-21x9" src="./new-courses/md/Screenshot 2023-08-10 193840.png" alt="">
@@ -303,10 +396,26 @@
                 </ul>
             </div>
             <!--  -->
-
-
     </div>
-   </section>
+    <!-- مارا دنبال کنید  -->
+    <section class=" justify-content-center align-items-start m-0 row py-4">
+        <div class=" col-10 colmd-7 justify-content-between px-1">
+            <div class="d-flex justify-content-between flex-wrap flex-lg-nowrap" >
+                <a href="#" class="p-2 w-50 text-decoration-none" >
+                    <picture>
+                        <source srcset="./contact-us/لینک-اینستاگرام-min.png" media="(min-width: 992px)" >
+                        <img class="w-100 h-auto"  src="./contact-us/social_instagram_banner-min.png" alt="">
+                    </picture>
+                </a>
+                <a href="#" class="p-2 w-50 text-decoration-none" >
+                    <picture>
+                        <source srcset="./contact-us/لینک-تلگرام-min.png" media="(min-width: 992px)" >
+                        <img class="w-100 h-auto"  src="./contact-us/social_telegram_banner-min.png" alt="">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </section>
    <section class="w-100  mx-vh-100 bg-light justify-content-center align-items-center m-0 row">
     <div class="col-12  col-lg-7 justify-content-center d-flex py-2">
         <div class="w-100  mx-vh-100  flex-nowrap gap-3  row py-2  overflow-auto align-items-start justify-content-start new-courses-container">
@@ -314,13 +423,13 @@
                 <div class="w-100 d-flex flex-column gap-2 ">
                     <img class="object-fit-cover d-lg-none w-100" src="./blog/اهمال-کاری-موبایل.png" alt=""> 
                     <img class="object-fit-cover h-auto d-none d-lg-block w-100" src="./blog/اهمال-کاریدسکتاپ.png" alt="">
-                    <p style="font-size: .7rem;" class=" fw-bold d-lg-none text-green-dark"  dir="rtl">اعمال‌کاری‌چیست؟‌تعریف‌دلایل‌راهکار‌ها</p>
+                    <p style="font-size: .7rem;" class=" fw-bolder d-lg-none text-green-dark"  dir="rtl">اعمال‌کاری‌چیست؟‌تعریف‌دلایل‌راهکار‌ها</p>
                     <p style="font-size: .7rem;" class=" d-lg-none text-secondary"  dir="rtl">
                         از این مهمانی به بعد رژیم غذایی خاصی را شروع می‌کنم، از فردا تصمیم من این است که فلان برنامه را داشته باشم، از هفته بعد به باشگاه ورزشی خواهم رفت، آخر ماه بالاخره تکلیفم را با رئیسم مشخص می‌کنم، از شنبه منظم می‌شوم و… . 
                     </p>
                     <div class=" d-lg-none d-flex justify-content-between align-items-center">
                         <div> 
-                            <button style="font-size: .7rem;" class="border gradient-bg-green text-white px-3 py-1 rounded-3">ادامه مطلب</button>
+                            <button style="font-size: .7rem;" class="border fw-bold gradient-bg-green text-white px-3 py-1 rounded-3">ادامه مطلب</button>
                         </div>
                         <div class="d-flex  w-50 align-items-center justify-content-between" >
                             <p style="font-size: .7rem;" class="text-secondary m-0 fw-bold" > آبان ۱۴۰۱</p>
@@ -333,13 +442,13 @@
                 <div class="w-100 d-flex flex-column gap-2 ">
                     <img class="object-fit-cover d-lg-none w-100" src="./blog/برنامه-ریزیموبایل.png" alt=""> 
                     <img class="object-fit-cover d-none d-lg-block w-100" src="./blog/برنامه-ریزیدسکتاپ.png" alt="">
-                    <p style="font-size: .7rem;" class=" fw-bold d-lg-none text-green-dark"  dir="rtl">برنامه ریزی چیست؟ چگونه برنامه ریزی کنیم تا به اهدافمان نزدیک شویم؟</p>
+                    <p style="font-size: .7rem;" class=" fw-bolder  d-lg-none text-green-dark"  dir="rtl">برنامه ریزی چیست؟ چگونه برنامه ریزی کنیم تا به اهدافمان نزدیک شویم؟</p>
                     <p style="font-size: .7rem;" class=" d-lg-none text-secondary"  dir="rtl">
                         دو فرد مختلف با هدفی یکسان را در نظر بگیرید. یکی از آن‌ها صرفاً برای خود هدفی مشخص کرده و لنگان‌لنگان به سمت هدف خود حرکت می‌کند. فرد دوم، علاوه بر مشخص کردن هدف، یک استراتژی و برنامه‌ای را نیز برای حرکت به‌سوی آن هدف را برای خود تعیین کرده. به نظرتان احتمال رسیدن به آن هدف در کدام یک از این دو فرد بیشتر است؟
                     </p>
                     <div class=" d-lg-none d-flex justify-content-between align-items-center">
                         <div> 
-                            <button style="font-size: .7rem;" class="border gradient-bg-green text-white px-3 py-1 rounded-3">ادامه مطلب</button>
+                            <button style="font-size: .7rem;" class="border fw-bold gradient-bg-green text-white px-3 py-1 rounded-3">ادامه مطلب</button>
                         </div>
                         <div class="d-flex  w-50 align-items-center justify-content-between" >
                             <p style="font-size: .7rem;" class="text-secondary m-0 fw-bold" > آبان ۱۴۰۱</p>
@@ -348,12 +457,12 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-6-1 rounded-2 w-100 p-2  h-lg-100 shadow bg-white overflow-hidden">
-                <div class="w-100 d-flex flex-column gap-2 ">
+            <div class="grid-6-1 rounded-2 w-100 p-2 h-lg-100  shadow bg-white overflow-hidden">
+                <div class="w-100 d-flex flex-column">
                     <img class="object-fit-cover d-lg-none  w-100" src="./blog/هدف-گذاری-چیست-موبایل.png" alt=""> 
                     <img class="object-fit-cover d-none d-lg-block w-100" src="./blog/هدف-گذاری-چیست-دسکتاپ.png" alt="">
-                    <p style="font-size: .7rem;" class=" fw-bold  text-green-dark"  dir="rtl">هدف گذاری چیست؟ معرفی بهترین روش‌های هدفگذاری</p>
-                    <p style="font-size: .7rem;" class="  text-secondary"  dir="rtl">
+                    <p style="font-size: .7rem;" class=" fw-bolder mt-1 text-green-dark"  dir="rtl">هدف گذاری چیست؟ معرفی بهترین روش‌های هدفگذاری</p>
+                    <p style="font-size: .6rem;" class="text-secondary"  dir="rtl">
                         آلبرت انیشیتین زمانی در جایی گفته است:
                         <br>
                         اگر می‌خواهید شاد زندگی کنید، زندگی را به یک هدف گره بزنید، نه به آدم‌ها و اشیا.
@@ -362,7 +471,7 @@
                     </p>
                     <div class=" d-flex justify-content-between align-items-center">
                         <div> 
-                            <button style="font-size: .7rem;" class="border gradient-bg-green text-white px-3 py-1 rounded-3">ادامه مطلب</button>
+                            <button style="font-size: .7rem;" class="border fw-bold gradient-bg-green text-white px-3 py-1 rounded-3">ادامه مطلب</button>
                         </div>
                         <div class="d-flex  w-50 align-items-center justify-content-between" >
                             <p style="font-size: .7rem;" class="text-secondary m-0 fw-bold" > آبان ۱۴۰۱</p>
@@ -381,7 +490,7 @@
     <div class="w-50 py-2  position-absolute top-0 ms-1 d-flex  justify-content-end align-items-center h-100" >
         <div class=" w-100  position-relative overflow-hidden rounded-3 py-1">
             <input type="text" dir="rtl" class="w-75 bg-transparent py-0 border-0 fw-bold text-green px-2 py-lg-1" >
-            <button class="w-25 position-absolute h-100 top-50 translate-middle-y text-white gradient-bg-green  fw-bold border-0 rounded-3" >ثبت نام</button>
+            <button class="w-25 position-absolute h-100 top-50 translate-middle-y pb-2 text-white gradient-bg-green  fw-bold border-0 rounded-3" >ثبت نام</button>
         </div>
     </div>
     </div>
@@ -391,14 +500,14 @@
         <div class="w-100 m-0  row flex-lg-row-reverse">
             <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
                 <div>
-                    <div class="bg-white open-footer-menu position-relative py-2 rounded-2 text-center " >
-                        <p dir="rtl" class="m-0 fw-bold pointer fs-5 text-dark" >شبکه های اجتماعی
+                    <div class="bg-white bg-lg-transparent open-footer-menu position-relative py-2 rounded-2 text-center " >
+                        <p dir="rtl" class="m-0 fw-bolder  pointer fs-5 text-dark" >شبکه های اجتماعی
                         </p>
                         <span class="material-symbols-outlined d-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
                             expand_more
                             </span>
                         </div>
-                        <div  class="bg-white overflow-hidden   text-center   " >
+                        <div  class="bg-white overflow-hidden bg-lg-transparent  text-center   " >
                             <ul class="list-unstyled  justify-content-center align-items-center  d-flex flex-row gap-3 my-3">
                                 <a class="text-decoration-none" href="">
                                     <li style="width: 50px; height: 50px;" class=" rounded-circle bg-dark text-white d-flex justify-content-center align-items-center" >
@@ -419,7 +528,7 @@
             <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
                 <div>
                     <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
-                        <p dir="rtl" class="m-0 fw-bold pointer text-dark fs-5" >صفحات‌مهم‌سایت
+                        <p dir="rtl" class="m-0 fw-bolder  pointer text-dark fs-5" >صفحات‌مهم‌سایت
                         </p>
                         <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
                             expand_more
@@ -428,16 +537,16 @@
                         <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
                             <ul class="list-unstyled d-flex flex-column gap-4 my-3">
                                 <li>
-                                    <a style="font-size: .9rem;" class="text-decoration-none text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    <a style="font-size: .9rem;" class="text-decoration-none fw-bold text-green" href="#">درباره‌و‌تماس‌باما</a>
                                 </li>
                                 <li>
-                                    <a style="font-size: .9rem;" class="text-decoration-none text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    <a style="font-size: .9rem;" class="text-decoration-none fw-bold text-green" href="#">درباره‌و‌تماس‌باما</a>
                                 </li>
                                 <li>
-                                    <a style="font-size: .9rem;" class="text-decoration-none text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    <a style="font-size: .9rem;" class="text-decoration-none fw-bold text-green" href="#">درباره‌و‌تماس‌باما</a>
                                 </li>
                                 <li>
-                                    <a style="font-size: .9rem;" class="text-decoration-none text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    <a style="font-size: .9rem;" class="text-decoration-none fw-bold text-green" href="#">درباره‌و‌تماس‌باما</a>
                                 </li>
                             </ul>
                         </div>
@@ -453,25 +562,25 @@
                             </span>
                         </div>
                         <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
-                            <h5 class="mt-2" >نشانی دفتر</h5>
-                            <p class="text-green" >تهران – سعادت آباد – بلوار دریا – خیابان صراف های جنوبی – خیابان ۲۵ غربی (قره تپه‌ای) – نبش کوچه شادی – پلاک ۱ – طبقه ۵</p>
+                            <h5 class="mt-2 fw-bold" >نشانی دفتر</h5>
+                            <p class="text-green fw-bold" >تهران – سعادت آباد – بلوار دریا – خیابان صراف های جنوبی – خیابان ۲۵ غربی (قره تپه‌ای) – نبش کوچه شادی – پلاک ۱ – طبقه ۵</p>
                             <div class="d-flex justify-content-center gap-1 align-items-center" >
-                                <p class="text-green" >
+                                <p class="text-green fw-bold" >
                                     کد پستی: ۱۹۹۸۸۶۷۱۸۶
                                 </p>
-                                <p class="text-green" >
+                                <p class="text-green fw-bold" >
                                     <span>تلفن:</span>
                                     <a class="text-decoration-none text-green" href="tel:02191090908">۰۲۱۹۱۰۹۰۹۰۸</a>
                                 </p>
                             </div>
-                            <p class="text-green" >ایمیل:site@bishtarazyek.com</p>
+                            <p class="text-green fw-bold" >ایمیل:site@bishtarazyek.com</p>
                         </div>
                 </div>
             </div>
             <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
                 <div>
                     <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
-                        <p dir="rtl" class="m-0 fw-bold pointer text-dark fs-5" >مجموعه‌های‌همکار
+                        <p dir="rtl" class="m-0 fw-bolder pointer text-dark fs-5" >مجموعه‌های‌همکار
                         </p>
                         <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
                             expand_more
@@ -498,10 +607,16 @@
         </div>
     </div>
     <div class="col-12 bg-green py-2">
-        <p class="text-center m-0 text-white">
+        <p class="text-center fw-bold fs-5 m-0 text-white">
             استفاده از سایت مشروط بر قبول توافق‌نامه کاربری و حفظ حریم شخصی است. 
         </p>
     </div>
 </footer>
+<!-- carousel js -->
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
+ 
