@@ -184,6 +184,14 @@
     }
 }
 .min {
+    &-w {
+        &-25 {
+            min-width: 25%;
+        }
+        &-15 {
+            min-width: 15%;
+        }
+    }
     &-vh {
         &-50 {
             min-height: 50vh;
@@ -191,6 +199,9 @@
     }
 }
 .h {
+    &-30 {
+        height: 35%;
+    }
     &-lg {
         &-unset {
             @include lg {
@@ -248,7 +259,18 @@ header {
         }
     }
 }
+.start {
+    &-5 {
+        left: 2%;
+    }
+}
 .top {
+    &-5 {
+        top: 5%; 
+    }
+    &-90 {
+        top: 90%;
+    }
     &-65 {
         top: 65%;
     }
@@ -331,5 +353,15 @@ header {
         border: none !important;
         @include green-gradient();
         color: white;
+    }
+}
+.pe {
+    &-md {
+        @include md {
+            &-45 {
+                padding-right: 2rem !important;
+            }
+
+        }
     }
 }

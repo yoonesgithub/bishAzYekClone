@@ -1,0 +1,51 @@
+.setting-active-link {
+  border-bottom: 2px solid #20C20F;
+}
+.setting-active-link a {
+  color: #20C20F !important;
+}
+
+.active-link {
+  background: rgb(33, 67, 32);
+  background: linear-gradient(90deg, rgb(33, 67, 32) 0%, rgb(46, 129, 37) 51%, rgb(32, 194, 15) 100%);
+}
+.active-link * {
+  color: white !important;
+}
+
+.profile-picture {
+  width: 18vw;
+  height: 18vw;
+}
+.profile-picture span {
+  font-size: 15px;
+}
+@media (min-width: 576px) {
+  .profile-picture span {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .profile-picture span {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .profile-picture span {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .profile-picture {
+    width: 10vw !important;
+    height: 10vw !important;
+  }
+}
+@media (min-width: 1200px) {
+  .profile-picture {
+    width: 7vw !important;
+    height: 7vw !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

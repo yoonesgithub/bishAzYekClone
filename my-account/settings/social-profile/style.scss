@@ -1,0 +1,45 @@
+@import '../../home/styles/mediaQuery';
+@import '../../home/styles/colors';
+.setting-active-link {
+    border-bottom: 2px solid $green;
+    & a {
+        color: $green !important;
+    }
+}
+.active-link {
+    background: rgb(33,67,32);
+            background: linear-gradient(90deg, rgba(33,67,32,1) 0%, rgba(46,129,37,1) 51%, rgba(32,194,15,1) 100%);
+
+    &  *{
+        color: white !important;
+    }
+}
+$mobile-size: 18vw;
+$tablet-size: 10vw;
+$xl: 7vw;
+.profile {
+    &-picture {
+        width: $mobile-size;
+        height: $mobile-size;
+        & span {
+            font-size: 15px;
+            @include  sm {
+                font-size: 25px;
+            }
+            @include md {
+                font-size: 18px;
+            }
+            @include lg {
+                font-size: 25px;
+            }
+        }
+        @include md {
+            width: $tablet-size !important;
+            height: $tablet-size !important;
+        }
+        @include xl {
+            width: $xl !important;
+            height: $xl !important;
+        }
+    }
+}

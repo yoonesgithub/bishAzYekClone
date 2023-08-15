@@ -31,4 +31,15 @@
         grid-template-rows: repeat(12,1fr);
     }
 }
-
+.event {
+    font-size: .7rem; 
+    @include sm {
+        font-size: .75rem;
+    }
+    @include md {
+        font-size: 1rem; 
+    }
+    @include md {
+        font-size: 1.25rem;
+    }
+}

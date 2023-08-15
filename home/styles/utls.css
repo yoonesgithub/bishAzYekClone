@@ -140,10 +140,19 @@
   max-height: 0 !important;
 }
 
+.min-w-25 {
+  min-width: 25%;
+}
+.min-w-15 {
+  min-width: 15%;
+}
 .min-vh-50 {
   min-height: 50vh;
 }
 
+.h-30 {
+  height: 35%;
+}
 @media (min-width: 992px) {
   .h-lg-unset {
     height: initial !important;
@@ -191,6 +200,16 @@
   }
 }
 
+.start-5 {
+  left: 2%;
+}
+
+.top-5 {
+  top: 5%;
+}
+.top-90 {
+  top: 90%;
+}
 .top-65 {
   top: 65%;
 }
@@ -265,6 +284,12 @@
   background: rgb(33, 67, 32);
   background: linear-gradient(90deg, rgb(33, 67, 32) 0%, rgb(46, 129, 37) 51%, rgb(32, 194, 15) 100%);
   color: white;
+}
+
+@media (min-width: 768px) {
+  .pe-md-45 {
+    padding-right: 2rem !important;
+  }
 }
 
 /*# sourceMappingURL=utls.css.map */
