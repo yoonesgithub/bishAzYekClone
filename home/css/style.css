@@ -55,12 +55,7 @@
   .owl-carousel .owl-dots {
     text-align: center;
     margin-top: 20px; }
-
-    @media (max-width: 576px) {
-      .owl-carousel .owl-dots  {
-        display: none;
-      }
-    }
+    
     .owl-carousel .owl-dots .owl-dot {
       width: 10px;
       height: 10px;

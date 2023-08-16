@@ -1,0 +1,18 @@
+.breadcrumb-item a {
+  color: #20C20F !important;
+}
+
+.card-details:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.offers-container p {
+  font-size: 0.9rem;
+}
+@media (min-width: 992px) {
+  .offers-container p {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
