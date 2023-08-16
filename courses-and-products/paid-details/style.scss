@@ -1,0 +1,20 @@
+@import '../../home/styles/colors';
+@import '../../home/styles/mediaQuery';
+.breadcrumb-item {
+    & a {
+        color: $green !important;
+    }
+}
+.card-details {
+    &:hover {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+}
+.offers-container {
+    & p {
+        font-size: .9rem;
+        @include lg {
+        font-size: 1rem;
+        }
+    }
+}
