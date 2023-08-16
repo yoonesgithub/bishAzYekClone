@@ -16,26 +16,42 @@
     <title>Document</title>
 </head>
 <body class="bg-light" >
+    <!-- header -->
     <header class="bg-light"> 
-        <div class="d-flex justify-content-between px-2  py-2 align-items-center">
-            <div class=" w-50 d-flex flex-wrap justify-content-start gap-3 align-items-center" >
-                <a id="login-enter-btn" href="#" class="w-75 text-decoration-none w-sm-50 w-md-35" >
-                    <button  class="register-btn  d-flex justify-content-center gap-2 align-items-center w-100 py-1 py-md-2  text-white border-0 rounded-1 gradient-bg-green" >
-                        <span class="material-symbols-outlined ">
-                            person_add
-                            </span>
-                            <p class="fs-6 fw-bold  m-0">
-                                ورود/ ثبت نام
-                            </p>
-                    </button>
-                </a>
-                <span id="open-search-menu" class="material-symbols-outlined pointer search-btn  fw-bold text-green-dark">
-                    search
-                </span>
+        <div class="row m-0 justify-content-between px-2 py-2 align-items-center">
+            <div class=" col-7 d-flex p-0 flex-wrap justify-content-between  align-items-center" >
+                <div class="row m-0 p-0 align-items-center justify-content-start  w-100  ">
+                    <div class="col-12 p-0">
+                        <div class="row  w-100 align-items-center  justify-content-start  m-0">
+                            <div class="col-8 col-md-6  header-btn-container col-lg-7 col-xl-4  p-0  d-flex  ">
+                                <a href="#" id="open-basket" class="text-decoration-none d-flex d-none  justify-content-center align-items-center px-2  rounded-1 text-white gradient-bg-green mx-1  " >
+                                    <span  class="material-symbols-outlined text-white header-basket">
+                                        shopping_cart
+                                    </span>
+                                </a>
+                                <a  id="login-enter-btn" href="#" class="text-decoration-none d-block  w-100 " >
+                                    <button class="register-btn w-100  d-flex justify-content-center gap-2 align-items-center  py-1 py-md-2  text-white border-0 rounded-1 gradient-bg-green" >
+                                        <span style="font-size: 1rem;" class="material-symbols-outlined header-user ">
+                                            person_add
+                                            </span>  
+                                            <p    class="fw-bold header-p m-0">
+                                                ورود/ ثبت نام
+                                            </p>
+                                    </button>
+                                </a>
+                            </div>
+                            <div  id="open-search-menu" class="col-2 align-items-center   d-flex justify-content-center">
+                                <span  class="material-symbols-outlined header-search  pointer search-btn hrader-search fw-bold text-green">
+                                    search
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class=" w-50 d-flex justify-content-end gap-3 align-items-center" >
-                <img class="w-50 w-md-35 pointer" src="https://www.bishtarazyek.com/wp-content/uploads/2021/09/logo.png.webp" alt="">
-                <span id="menu-btn" class="material-symbols-outlined pointer d-lg-none text-green-dark">
+            <div class="col-5  d-flex justify-content-end gap-3 align-items-center" >
+                <img class="w-50 w-md-35   pointer" src="https://www.bishtarazyek.com/wp-content/uploads/2021/09/logo.png.webp" alt="">
+                <span id="menu-btn" class="material-symbols-outlined pointer d-lg-none text-green">
                     menu
                     </span>
             </div>
@@ -43,16 +59,16 @@
         <nav  style="display: none;" class="mt-2 w-100 p-0 d-lg-block" >
             <ul class="list-unstyled  m-0 d-flex flex-column-reverse align-items-end pe-3 rounded-2 bg-green-light flex-lg-row py-2 gap-2  gap-lg-4   bg-lg-transparent justify-content-lg-end " >
                 <li>
-                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/about-us/">درباره‌ و‌ ‌تماس‌باما</a>
+                    <a class="text-decoration-none t-300  position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/about-us/">درباره‌ و‌ ‌تماس‌باما</a>
                 </li> 
                 <li>
-                    <a class="text-decoration-none t-300 position-relative active-link text-dark fw-medium fw-lg-bold fs-lg-5" href="/blog/">مقالات</a>
+                    <a class="text-decoration-none t-300 active-link position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/blog/">مقالات</a>
                 </li>
                 <li>
-                    <a class="text-decoration-none t-300 position-relative  text-dark fw-medium fw-lg-bold fs-lg-5" href="/courses-and-products/">دوره‌ها‌و‌محصولات</a>
+                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium  fw-lg-bold fs-lg-5" href="/courses-and-products/">دوره‌ها‌و‌محصولات</a>
                 </li>
                 <li>
-                    <a class="text-decoration-none t-300 position-relative  text-dark fw-medium fw-lg-bold fs-lg-5" href="/free/index.html">دوره‌های‌رایگان</a>
+                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/free/index.html">دوره‌های‌رایگان</a>
                 </li>
                 <li>
                     <a class="text-decoration-none t-300  position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/home/index.html">خانه</a>
@@ -67,6 +83,105 @@
             <span id="close-search-menu" class="material-symbols-outlined pointer position-absolute text-white start-0 top-50 ms-3 fs-4 fw-bold">
                 close
             </span>
+        </div>
+    </div>
+    <!-- basket -->
+    <div  id="basket-container" style="z-index: 10000;display: none;" class="position-fixed  bg-opacity-50 vh-100 vw-100 top-0 start-0 bg-black">
+        <div id="basket-cover" class="w-100 h-100  row m-0">
+            <div id="basket-menu"  class="h-100 t-500 p-4 col-12  overflow-auto col-md-6 col-lg-4 col-xl-3 bg-white rounded-end  " >
+                <div>
+                    <span id="close-basket" title="بستن‌سبد‌خرید" class="material-symbols-outlined pointer text-danger fw-bold">
+                        remove_shopping_cart
+                        </span>
+                </div>
+                <p class="text-break text-center text-secondary fw-bold">
+                    محصولی‌در‌سبد‌یافت‌نشد
+                </p>
+                <!-- محصولات در اینجا حلقه میخورند -->
+                <div dir="rtl" class="d-flex flex-column  gap-2  pt-3 align-items-center justify-content-start">
+                    <!-- محصول -->
+                    <div class="d-flex flex-column gap-2 px-2 pt-4 pb-2 rounded shadow w-100" >
+                        <div class="d-flex gap-3 w-100 align-items-center justify-content-between">
+                            <img class="w-25" src="./basket/عکس-شاخص-بوتکمپ-300x300.jpg" alt="">
+                            <p class="w-75 m-0 " >
+                                بوتکمپ آنلاین fearless | در این دوره، بی‌باک شوید!
+                            </p>
+                        </div>
+                        <hr class="m-0" >
+                        <div style="width: fit-content;" class="fw-bold  m-auto text-center text-secondary opacity-50 " >
+                            <p class="mb-0  text-end " >1</p>
+                            <p  class="text-center m-0">
+                                4,000,000
+                                تومان
+                            </p>
+                        </div>
+                        <div  class="d-flex py-1  align-items-center justify-content-center fs-5 text-secondary  flex-wrap">
+                            <p class="m-0 fw-black" >جمع جز:</p>
+                            <p class="m-0 fw-black" > 4,000,000
+                                تومان</p>
+                        </div>
+                        <hr class="m-0" >
+                        <button class="py-2 border-0  text-white bg-green rounded-1 fw-bold">
+                            تسویه‌حساب
+                        </button>
+                    </div>
+                    <!--  -->
+                    <!-- محصول -->
+                    <div class="d-flex flex-column gap-2 px-2 pt-4 pb-2 rounded shadow w-100" >
+                        <div class="d-flex gap-3 w-100 align-items-center justify-content-between">
+                            <img class="w-25" src="./basket/عکس-شاخص-بوتکمپ-300x300.jpg" alt="">
+                            <p class="w-75 m-0 " >
+                                بوتکمپ آنلاین fearless | در این دوره، بی‌باک شوید!
+                            </p>
+                        </div>
+                        <hr class="m-0" >
+                        <div style="width: fit-content;" class="fw-bold  m-auto text-center text-secondary opacity-50 " >
+                            <p class="mb-0  text-end " >1</p>
+                            <p  class="text-center m-0">
+                                4,000,000
+                                تومان
+                            </p>
+                        </div>
+                        <div  class="d-flex py-1  align-items-center justify-content-center fs-5 text-secondary  flex-wrap">
+                            <p class="m-0 fw-black" >جمع جز:</p>
+                            <p class="m-0 fw-black" > 4,000,000
+                                تومان</p>
+                        </div>
+                        <hr class="m-0" >
+                        <button class="py-2 border-0  text-white bg-green rounded-1 fw-bold">
+                            تسویه‌حساب
+                        </button>
+                    </div>
+                    <!--  -->
+                    <!-- محصول -->
+                    <div class="d-flex flex-column gap-2 px-2 pt-4 pb-2 rounded shadow w-100" >
+                        <div class="d-flex gap-3 w-100 align-items-center justify-content-between">
+                            <img class="w-25" src="./basket/عکس-شاخص-بوتکمپ-300x300.jpg" alt="">
+                            <p class="w-75 m-0 " >
+                                بوتکمپ آنلاین fearless | در این دوره، بی‌باک شوید!
+                            </p>
+                        </div>
+                        <hr class="m-0" >
+                        <div style="width: fit-content;" class="fw-bold  m-auto text-center text-secondary opacity-50 " >
+                            <p class="mb-0  text-end " >1</p>
+                            <p  class="text-center m-0">
+                                4,000,000
+                                تومان
+                            </p>
+                        </div>
+                        <div  class="d-flex py-1  align-items-center justify-content-center fs-5 text-secondary  flex-wrap">
+                            <p class="m-0 fw-black" >جمع جز:</p>
+                            <p class="m-0 fw-black" > 4,000,000
+                                تومان</p>
+                        </div>
+                        <hr class="m-0" >
+                        <button class="py-2 border-0  text-white bg-green rounded-1 fw-bold">
+                            تسویه‌حساب
+                        </button>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
         </div>
     </div>
 
