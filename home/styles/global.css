@@ -7,8 +7,17 @@
   font-weight: bolder;
   src: url("../../font/bold.woff2");
 }
+@font-face {
+  font-family: "bishazyek-black";
+  font-weight: 900;
+  src: url("../../font/black.woff2");
+}
 .fw-bolder {
   font-family: "bishazyek-bold";
+}
+
+.fw-black {
+  font-family: "bishazyek-black" !important;
 }
 
 .fw-lg-bold {
@@ -19,7 +28,7 @@
   font-family: "bishazyek";
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 input, select {
@@ -123,6 +132,28 @@ input:not([type=checkbox]):focus {
 }
 input:not([type=checkbox]):focus + span {
   color: #20C20F !important;
+}
+
+.header-btn-container .header-basket, .header-btn-container .header-user, .header-btn-container .header-search {
+  font-size: 1rem !important;
+}
+.header-btn-container .header-p {
+  font-size: 0.7rem !important;
+}
+@media (min-width: 768px) {
+  .header-btn-container .header-basket, .header-btn-container .header-user, .header-btn-container .header-search {
+    font-size: 1.2rem !important;
+  }
+  .header-btn-container .header-p {
+    font-size: 0.9rem !important;
+  }
+}
+
+#basket-menu {
+  transform: translateX(-100%);
+}
+#basket-menu.active {
+  transform: none;
 }
 
 /*# sourceMappingURL=global.css.map */

@@ -9,8 +9,16 @@
     font-weight: bolder;
     src: url('../../font/bold.woff2');
 }
+@font-face {
+    font-family: "bishazyek-black";
+    font-weight: 900;
+    src: url('../../font/black.woff2');
+}
 .fw-bolder {
     font-family: "bishazyek-bold";
+}
+.fw-black {
+    font-family: "bishazyek-black" !important;
 }
 .fw-lg-bold {
     font-family: "bishazyek-bold";
@@ -19,7 +27,7 @@
     font-family: 'bishazyek';
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important ;
 }
 input,select {
     outline: 0 !important;
@@ -124,5 +132,29 @@ input {
                 color: colors.$green !important;
             }
         }
+    }
+}
+.header-btn-container {
+    & .header {
+        &-basket,&-user,&-search {
+            font-size: 1rem !important; 
+        }
+        &-p {
+            font-size: .7rem !important;
+        }
+        @include md {
+            &-basket,&-user,&-search {
+                font-size: 1.2rem !important; 
+            }
+            &-p {
+                font-size: .9rem !important ;
+            }
+        }
+    }
+}
+#basket-menu {
+    transform: translateX(-100%);
+    &.active {
+        transform: none;
     }
 }

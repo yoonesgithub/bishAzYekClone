@@ -7,6 +7,7 @@ $(document).ready(function () {
             $("#login-enter-btn").attr("href", "/my-account/panel.html");
             $("#login-enter-btn").find("p").text("حساب‌ کاربری‌ من");
             $("#login-enter-btn").find("span").html("person");
+            $("#open-basket").removeClass("d-none");
         } else {
             $("#login-enter-btn").attr("href", "/login/login.html");
             $("#login-enter-btn").find("p").text("ورود/ثبت‌نام");
@@ -42,5 +43,28 @@ $(document).ready(function () {
         $("#search-menu").toggle(300);
         $("#search-input").val("");
         location.search = `s=${input}`;
+    }
+    $("#open-basket").click(function() {
+        $("#basket-container").show(100);
+        toggleBasketMenu();
+    })
+    // مقدار تایم اوت باید با مقدار ترنزیشن ست شده در سی اس اس
+    // "#basket-menu" === t-500
+    // برابر باشد 
+    $("#close-basket").click(function() {
+        hidebasket(500)
+    })
+    $("#basket-container").click(function (e) {
+        e.target.id == "basket-cover" && hidebasket(500);
+        
+    });
+    function hidebasket(timer) {
+        toggleBasketMenu();
+        setTimeout(() => {
+            $("#basket-container").hide(100);
+        }, timer);
+    }
+    function toggleBasketMenu() {
+        $("#basket-menu").toggleClass("active");
     }
 });
