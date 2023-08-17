@@ -49,6 +49,9 @@
 .text-green-dark {
   color: #106308;
 }
+.text-warning-dark {
+  color: #a07800;
+}
 
 .w-15 {
   width: 15%;
@@ -219,18 +222,18 @@
   }
 }
 
-.green-scroll {
+* {
   scrollbar-width: 1px;
-  scrollbar-color: #20c20f #f8f9fa;
+  scrollbar-color: #20C20F #f8f9fa;
 }
-.green-scroll::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 1px;
 }
-.green-scroll::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: #f8f9fa;
 }
-.green-scroll::-webkit-scrollbar-thumb {
-  background-color: #20c20f;
+*::-webkit-scrollbar-thumb {
+  background-color: #20C20F;
   border-radius: 10px;
   border: 5px solid #f8f9fa;
 }
@@ -290,6 +293,10 @@
   .pe-md-45 {
     padding-right: 2rem !important;
   }
+}
+
+.border-green {
+  border: 2px solid #20C20F;
 }
 
 /*# sourceMappingURL=utls.css.map */

@@ -126,11 +126,11 @@ header a:hover::after {
   }
 }
 
-input:not([type=checkbox]):focus {
+input:not([type=checkbox]):focus, textarea:not([type=checkbox]):focus {
   outline: 2px solid #20C20F !important;
   color: #20C20F !important;
 }
-input:not([type=checkbox]):focus + span {
+input:not([type=checkbox]):focus + span, textarea:not([type=checkbox]):focus + span {
   color: #20C20F !important;
 }
 

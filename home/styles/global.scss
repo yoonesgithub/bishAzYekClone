@@ -122,7 +122,7 @@ header {
     }
 }
 
-input {
+input,textarea {
     
     &:not([type="checkbox"]) {
         &:focus {
@@ -134,6 +134,7 @@ input {
         }
     }
 }
+
 .header-btn-container {
     & .header {
         &-basket,&-user,&-search {
