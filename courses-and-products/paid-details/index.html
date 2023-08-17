@@ -137,7 +137,7 @@
     </div>
     <main dir="rtl" class="bg-white">
         <!-- دکمه فیکس پایین -->
-        <div class="position-fixed px-2 align-items-start gap-4 flex-column d-flex bottom-0 w-100" >
+        <div style="z-index: 9999;" class="position-fixed px-3  align-items-start gap-4 flex-column d-flex bottom-0 w-100" >
             <div class="w-100 d-flex align-items-center   justify-content-between">
                 <span id="go-up" class="material-symbols-outlined bg-info fw-bold text-white py-1 px-2 rounded-2 pointer">
                     expand_less
@@ -382,8 +382,8 @@
                 <div id="khadamat-cnt" class="row m-0 align-items-start  py-3">
                     <!-- لوپ خدمات -->
                     <div class="col-md-6   p-2 ">
-                        <div class="bg-green  overflow-hidden  p-2 text-white px-2 rounded-1" >
-                            <p class="m-0 khadamat-card" >
+                        <div class="bg-green  overflow-hidden khadamat-card p-2 text-white px-2 rounded-1" >
+                            <p class="m-0 " >
                                 24 جلسه آموزشی
                             </p>
                         </div>
@@ -391,8 +391,8 @@
                     <!--  -->
                     <!-- لوپ خدمات -->
                     <div class="col-md-6  p-2 ">
-                        <div class="bg-green  overflow-hidden p-2 text-white px-2 rounded-1" >
-                            <p class="m-0 khadamat-card" >
+                        <div class="bg-green khadamat-card overflow-hidden p-2 text-white px-2 rounded-1" >
+                            <p class="m-0 " >
                                 24 جلسه آموزشی
                             </p>
                         </div>
@@ -400,7 +400,7 @@
                     <!--  -->
                 </div>
                 <!--   اسلایدر -->
-                <div class="py-3 px-5">
+                <div class="py-3 px-1 px-lg-5">
                     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
@@ -469,7 +469,7 @@
                     </ul>
                 </div>
                 <!-- slider2 -->
-                <div class="py-3 px-5">
+                <div class="py-3 px-1 px-lg-5">
                     <div id="carouselExampleControlsNoTouching2" class="carousel slide" data-bs-touch="false">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
@@ -522,43 +522,44 @@
                     با کسب تجربیات هفت دوره برگزاری مدرسه استادی، یک آموزش ناب و فوق‌العاده ارائه کردیم که رو دست ندارد. به مدت مجموعاً 24 جلسه در کنار یکدیگر یک کسب‌وکار مبتنی بر سخنرانی و آموزش را راه‌اندازی خواهیم کرد. از اصلی‌ترین ویژگی‌های این دوره -علاوه بر مطالب آموزشی- کاربردی بودن و پیگیری‌های مستمر و هفته‌‌ای 1 بار است. بدون تردید تلاش کرده‌ایم محتوای واقعاً به‌دردبخور و کاربردی برای شما تهیه کنیم. در این دوره، حداقل روی چهار تخصص کار می‌کنیم:
                 </p>
                 <!-- موارد بیان شده به صورت کارت -->
-                <div class="row m-0 align-items-start  py-3">
-                    <!-- لوپ خدمات -->
+                <div id="mataleb-cnt" class="row  m-0 align-items-start  py-3">
+                    <!-- لوپ مطلب -->
                     <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
+                        <div class="bg-green matlab-card p-2 text-white px-2 rounded-1" >
                             <p class="m-0" >
                                 24 جلسه آموزشی
                             </p>
                         </div>
                     </div>
                     <!--  -->
-                    <!-- لوپ خدمات -->
+                    <!-- لوپ مطلب -->
                     <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
+                        <div class="bg-green matlab-card p-2 text-white px-2 rounded-1" >
                             <p class="m-0" >
                                 24 جلسه آموزشی
                             </p>
                         </div>
                     </div>
                     <!--  -->
-                    <!-- لوپ خدمات -->
+                    <!-- لوپ مطلب -->
                     <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
+                        <div class="bg-green matlab-card p-2 text-white px-2 rounded-1" >
                             <p class="m-0" >
                                 24 جلسه آموزشی
                             </p>
                         </div>
                     </div>
                     <!--  -->
-                    <!-- لوپ خدمات -->
+                    <!-- لوپ مطلب -->
                     <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
+                        <div class="bg-green matlab-card p-2 text-white px-2 rounded-1" >
                             <p class="m-0" >
                                 24 جلسه آموزشی
                             </p>
                         </div>
                     </div>
                     <!--  -->
+
                 </div>
                 <!-- توضیح اخر -->
                 <p " class="text-center  text-break" >
@@ -589,130 +590,132 @@
                     </p>
                 </li>
             </ul>
-            <!-- مشخصات افراد سخنران -->
-            <div class="py-2 flex-column align-items-center d-flex gap-3">
-                <p>
-                    باید به یاد داشته باشیم که چنین موفقیت بزرگی اصلاً کار ساده‌ای نیست و بسیاری از افراد ساده انگار فکر می‌کنند:
-                </p>
-                <p class="fw-bolder text-green">
-                    کاری نداره که! میریم سخنرانی می‌کنیم، پول می‌گیریم،‌ میایم!
-                </p>
-                <p>
-                    اما واقعاً از شما خواهش می‌کنم که به یاد داشته باشید که این مسیر اصلاً ساده نیست و افراد تنبل و بی‌مسئولیت به هیچ دستاوردی در این دوره نخواهند رسید!
-                </p>
-            </div>
-            <!-- کارت مشخصات -->
-            <div class="py-4 my-3 px-3 bg-warning rounded-2 bg-opacity-25">
-                <ul class="list-unstyled m-0 flex-column d-flex gap-3">
-                    <!-- لوپ موارد -->
-                    <li>
-                        <div class="d-flex align-items-center   gap-3 ">
-                            <span class="material-symbols-outlined  fw-bold text-warning rotate-x-180">
-                                approval_delegation
-                                </span>
-                                <p class="m-0 fw-bold text-warning-dark">
-                                    تلاش فکری بسیار زیاد    
-                                </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center   gap-3 ">
-                            <span class="material-symbols-outlined  fw-bold text-warning rotate-x-180">
-                                approval_delegation
-                                </span>
-                                <p class="m-0 fw-bold text-warning-dark">
-                                    تلاش فکری بسیار زیاد    
-                                </p>
-                        </div>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- کارت و عکس های مزایا -->
-            <div class="row  mx-0 py-4 justify-content-center">
-                <div class="col-11 " >
-                    <div class="py-2 shadow justify-content-center  bg-light overflow-hidden rounded-2 offers-container row m-0">
-                        <!-- لوپ دریافتی ها -->
-                        <div class="ps-md-2 col-md-6 col-lg-4">
-                            <div>
-                                <div class="  py-2  d-flex flex-column px-4  align-items-center justify-content-start gap-1" >
-                                    <img src="./جلسه-150x150.png" class="rounded-circle object-fit-cover"  style="width: 150px; height: 150px;" alt="">
-                                    <p class="fw-bolder text-break mt-2  w-100 text-center text-green">
-                                        کاری که دوست دارید می‌کنید و روش‌های مختلف درآمدی دارید!
+            <div id="animate-rtl">
+                <!-- مشخصات افراد سخنران -->
+                <div  class="py-2  flex-column align-items-center d-flex gap-3">
+                    <p>
+                        باید به یاد داشته باشیم که چنین موفقیت بزرگی اصلاً کار ساده‌ای نیست و بسیاری از افراد ساده انگار فکر می‌کنند:
+                    </p>
+                    <p class="fw-bolder text-green">
+                        کاری نداره که! میریم سخنرانی می‌کنیم، پول می‌گیریم،‌ میایم!
+                    </p>
+                    <p>
+                        اما واقعاً از شما خواهش می‌کنم که به یاد داشته باشید که این مسیر اصلاً ساده نیست و افراد تنبل و بی‌مسئولیت به هیچ دستاوردی در این دوره نخواهند رسید!
+                    </p>
+                </div>
+                <!-- کارت مشخصات -->
+                <div class="py-4 my-3 px-3 bg-warning rounded-2 bg-opacity-25">
+                    <ul class="list-unstyled m-0 flex-column d-flex gap-3">
+                        <!-- لوپ موارد -->
+                        <li>
+                            <div class="d-flex align-items-center   gap-3 ">
+                                <span class="material-symbols-outlined  fw-bold text-warning rotate-x-180">
+                                    approval_delegation
+                                    </span>
+                                    <p class="m-0 fw-bold text-warning-dark">
+                                        تلاش فکری بسیار زیاد    
                                     </p>
-                                    <p class="text-center" >
-                                        تدریس و آموزش دادن یکی از جذاب‌ترین کارهای دنیاست. بدون سرمایه، می‌توانید با آموزش حرفه‌ای به دیگران، درآمد بالا به دست آورید و ضمناً در هر حیطه‌ای که دوست دارید، فعالیت کنید!
-                                    </p>
-                                </div>
                             </div>
-                        </div>
-                        <!--  -->
-                        <!-- لوپ دریافتی ها -->
-                        <div class="ps-md-2 col-md-6 col-lg-4">
-                            <div>
-                                <div class="  py-2  d-flex flex-column px-4  align-items-center justify-content-start gap-1" >
-                                    <img src="./جلسه-150x150.png" class="rounded-circle object-fit-cover"  style="width: 150px; height: 150px;" alt="">
-                                    <p class="fw-bolder text-break mt-2  w-100 text-center text-green">
-                                        کاری که دوست دارید می‌کنید و روش‌های مختلف درآمدی دارید!
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center   gap-3 ">
+                                <span class="material-symbols-outlined  fw-bold text-warning rotate-x-180">
+                                    approval_delegation
+                                    </span>
+                                    <p class="m-0 fw-bold text-warning-dark">
+                                        تلاش فکری بسیار زیاد    
                                     </p>
-                                    <p class="text-center" >
-                                        تدریس و آموزش دادن یکی از جذاب‌ترین کارهای دنیاست. بدون سرمایه، می‌توانید با آموزش حرفه‌ای به دیگران، درآمد بالا به دست آورید و ضمناً در هر حیطه‌ای که دوست دارید، فعالیت کنید!
-                                    </p>
-                                </div>
                             </div>
-                        </div>
-                        <!--  -->
-                        <!-- لوپ دریافتی ها -->
-                        <div class="ps-md-2 col-md-6 col-lg-4">
-                            <div>
-                                <div class="  py-2  d-flex flex-column px-4  align-items-center justify-content-start gap-1" >
-                                    <img src="./جلسه-150x150.png" class="rounded-circle object-fit-cover"  style="width: 150px; height: 150px;" alt="">
-                                    <p class="fw-bolder text-break mt-2  w-100 text-center text-green">
-                                        کاری که دوست دارید می‌کنید و روش‌های مختلف درآمدی دارید!
-                                    </p>
-                                    <p class="text-center" >
-                                        تدریس و آموزش دادن یکی از جذاب‌ترین کارهای دنیاست. بدون سرمایه، می‌توانید با آموزش حرفه‌ای به دیگران، درآمد بالا به دست آورید و ضمناً در هر حیطه‌ای که دوست دارید، فعالیت کنید!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  -->
-
+                        </li>
+                    </ul>
     
+                </div>
+                <!-- کارت و عکس های مزایا -->
+                <div class="row  mx-0 py-4 justify-content-center">
+                    <div class="col-11 " >
+                        <div class="py-2 shadow justify-content-center  bg-light overflow-hidden rounded-2 offers-container row m-0">
+                            <!-- لوپ دریافتی ها -->
+                            <div class="ps-md-2 col-md-6 col-lg-4">
+                                <div>
+                                    <div class="  py-2  d-flex flex-column px-4  align-items-center justify-content-start gap-1" >
+                                        <img src="./جلسه-150x150.png" class="rounded-circle object-fit-cover"  style="width: 150px; height: 150px;" alt="">
+                                        <p class="fw-bolder text-break mt-2  w-100 text-center text-green">
+                                            کاری که دوست دارید می‌کنید و روش‌های مختلف درآمدی دارید!
+                                        </p>
+                                        <p class="text-center" >
+                                            تدریس و آموزش دادن یکی از جذاب‌ترین کارهای دنیاست. بدون سرمایه، می‌توانید با آموزش حرفه‌ای به دیگران، درآمد بالا به دست آورید و ضمناً در هر حیطه‌ای که دوست دارید، فعالیت کنید!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <!-- لوپ دریافتی ها -->
+                            <div class="ps-md-2 col-md-6 col-lg-4">
+                                <div>
+                                    <div class="  py-2  d-flex flex-column px-4  align-items-center justify-content-start gap-1" >
+                                        <img src="./جلسه-150x150.png" class="rounded-circle object-fit-cover"  style="width: 150px; height: 150px;" alt="">
+                                        <p class="fw-bolder text-break mt-2  w-100 text-center text-green">
+                                            کاری که دوست دارید می‌کنید و روش‌های مختلف درآمدی دارید!
+                                        </p>
+                                        <p class="text-center" >
+                                            تدریس و آموزش دادن یکی از جذاب‌ترین کارهای دنیاست. بدون سرمایه، می‌توانید با آموزش حرفه‌ای به دیگران، درآمد بالا به دست آورید و ضمناً در هر حیطه‌ای که دوست دارید، فعالیت کنید!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <!-- لوپ دریافتی ها -->
+                            <div class="ps-md-2 col-md-6 col-lg-4">
+                                <div>
+                                    <div class="  py-2  d-flex flex-column px-4  align-items-center justify-content-start gap-1" >
+                                        <img src="./جلسه-150x150.png" class="rounded-circle object-fit-cover"  style="width: 150px; height: 150px;" alt="">
+                                        <p class="fw-bolder text-break mt-2  w-100 text-center text-green">
+                                            کاری که دوست دارید می‌کنید و روش‌های مختلف درآمدی دارید!
+                                        </p>
+                                        <p class="text-center" >
+                                            تدریس و آموزش دادن یکی از جذاب‌ترین کارهای دنیاست. بدون سرمایه، می‌توانید با آموزش حرفه‌ای به دیگران، درآمد بالا به دست آورید و ضمناً در هر حیطه‌ای که دوست دارید، فعالیت کنید!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+    
+        
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- تایتل شرکت کنندگان -->
-               <div class="pb-3 pt-5">
-                <div class=" d-flex justify-content-center align-items-center" >
-                    <div style="height: 1px;"  class="bg-green w-50" ></div>
-                        <h5 class="bg-white w-75 fw-bolder  text-center  text-green">
-                            بخشی از تصاویر شرکت کنندگان دوره استادی
-                        </h5>
+                <!-- تایتل شرکت کنندگان -->
+                   <div class="pb-3 pt-5">
+                    <div class=" d-flex justify-content-center align-items-center" >
                         <div style="height: 1px;"  class="bg-green w-50" ></div>
-                    </div>
-            </div>
-            <!-- slider 3 -->
-            <div class="py-3">
-                <div id="carouselExampleControlsNoTouching3" class="carousel  slide" data-bs-touch="false">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active ratio ratio-21x9">
-                        <img src="./slider3/MG_2841-scaled.jpg" class="d-block object-fit-cover w-100" alt="...">
+                            <h5 class="bg-white w-75 fw-bolder  text-center  text-green">
+                                بخشی از تصاویر شرکت کنندگان دوره استادی
+                            </h5>
+                            <div style="height: 1px;"  class="bg-green w-50" ></div>
+                        </div>
+                </div>
+                <!-- slider 3 -->
+                <div class="py-3">
+                    <div id="carouselExampleControlsNoTouching3" class="carousel  slide" data-bs-touch="false">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active ratio ratio-21x9">
+                            <img src="./slider3/MG_2841-scaled.jpg" class="d-block object-fit-cover w-100" alt="...">
+                          </div>
+                          <div class="carousel-item ratio ratio-21x9">
+                            <img src="./slider3/MG_2841-scaled.jpg" class="d-block object-fit-cover w-100" alt="...">
+                          </div>
+                          <div class="carousel-item ratio ratio-21x9">
+                            <img src="./slider3/MG_2841-scaled.jpg" class="d-block object-fit-cover w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="next">
+                          <span class="carousel-control-next-icon text-green" aria-hidden="true"></span>
+                        </button>
                       </div>
-                      <div class="carousel-item ratio ratio-21x9">
-                        <img src="./slider3/MG_2841-scaled.jpg" class="d-block object-fit-cover w-100" alt="...">
-                      </div>
-                      <div class="carousel-item ratio ratio-21x9">
-                        <img src="./slider3/MG_2841-scaled.jpg" class="d-block object-fit-cover w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="next">
-                      <span class="carousel-control-next-icon text-green" aria-hidden="true"></span>
-                    </button>
-                  </div>
+                </div>
             </div>
             <!-- تایتل مدرسه استادی -->
             <div class="pb-3 pt-5">
@@ -725,7 +728,7 @@
                     </div>
             </div>
             <!-- توضیحات مدرس -->
-            <div class="row   justify-content-center  m-0 ">
+            <div id="animate-ltr" class="row  justify-content-center  m-0 ">
                 <div class="col-md-6 p-2" >
                     <img src="./2-1.jpg" class="w-100 rounded-1" alt="">
                 </div>

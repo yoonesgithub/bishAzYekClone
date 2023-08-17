@@ -1,10 +1,17 @@
 $(document).ready(function () {
     let photos = [
-        "./photo-slider/2.jpg",
-        "./photo-slider/3.jpg",
-        "./photo-slider/4.jpg",
-        "./photo-slider/5.jpg",
-        "./photo-slider/6.png"
+        {
+            content:"https://s3.ir-tbz-sh1.arvanstorage.ir/newest/databaseModel.P…ignature=hoAtdSzsxQOP%2BSUqauSVtklgL4Y%3D&Expires=1692311388",
+            link:"a.html"
+        },
+        {
+            content:"https://s3.ir-tbz-sh1.arvanstorage.ir/newest/databaseModel.P…ignature=hoAtdSzsxQOP%2BSUqauSVtklgL4Y%3D&Expires=1692311388",
+            link:"a.html"
+        },
+        {
+            content:"https://s3.ir-tbz-sh1.arvanstorage.ir/newest/databaseModel.P…ignature=hoAtdSzsxQOP%2BSUqauSVtklgL4Y%3D&Expires=1692311388",
+            link:"a.html"
+        },
     ];
     let videos = [
         "./254-how-js-engine-work.mp4",

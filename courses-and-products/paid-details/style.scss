@@ -25,8 +25,11 @@
     &-fade {
         animation: fadeIn 700ms ease-in 1;
     }
-    &-width {
-        animation: width 7000ms ease-in 1;
+    &-rtl {
+        animation: rtl 900ms ease 1;
+    }
+    &-ltr {
+        animation: ltr 900ms ease 1;
     }
 }
 @keyframes up {
@@ -47,11 +50,19 @@
         opacity: 1;
     }
 }
-@keyframes width {
+@keyframes rtl {
     0% {
-        max-width: 0%;
+        transform: translateX(100%);
     }
     100% {
-        max-width:1000px;
+        transform: none;
+    }
+}
+@keyframes ltr {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: none;
     }
 }
