@@ -29,10 +29,15 @@ $(document).ready(function () {
         return arr.length;
     }
     function getPhoto(index) {
-        return photos[index] ?? photos[0]
+        return  {
+            content: photos[index],
+            link: 'https://www.google.com'
+        }
     }
     function getVideo(index) {
-        return videos[index]
+        return  {
+            content: videos[index]
+        }
     }
     function setSlideDuration(input) {
         // number validation
@@ -41,7 +46,11 @@ $(document).ready(function () {
     let photo;
     function loadSliderContent(id,index,contenLoaderFn) {
         content = contenLoaderFn(index);
-        $(id).attr("src", content);
+        console.log(content);
+        $(id).attr("src", content.content);
+        if (content.link) {
+           $("#slider-link").attr("href", content.link); 
+        }
     }
     function slideForward(id,contenLoaderFn) {
         console.log(id);
