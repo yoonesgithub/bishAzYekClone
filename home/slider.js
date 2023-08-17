@@ -29,10 +29,7 @@ $(document).ready(function () {
         return arr.length;
     }
     function getPhoto(index) {
-        return  {
-            content: photos[index],
-            link: 'https://www.google.com'
-        }
+        return photos[index] || photos[0];
     }
     function getVideo(index) {
         return  {

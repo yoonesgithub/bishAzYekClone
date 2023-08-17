@@ -15,4 +15,41 @@
   }
 }
 
+.animate-up {
+  animation: up 700ms ease-in 1;
+}
+.animate-fade {
+  animation: fadeIn 700ms ease-in 1;
+}
+.animate-width {
+  animation: width 7000ms ease-in 1;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes width {
+  0% {
+    max-width: 0%;
+  }
+  100% {
+    max-width: 1000px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -222,17 +222,17 @@
   }
 }
 
-* {
+.green-scrol {
   scrollbar-width: 1px;
   scrollbar-color: #20C20F #f8f9fa;
 }
-*::-webkit-scrollbar {
+.green-scrol::-webkit-scrollbar {
   width: 1px;
 }
-*::-webkit-scrollbar-track {
+.green-scrol::-webkit-scrollbar-track {
   background: #f8f9fa;
 }
-*::-webkit-scrollbar-thumb {
+.green-scrol::-webkit-scrollbar-thumb {
   background-color: #20C20F;
   border-radius: 10px;
   border: 5px solid #f8f9fa;

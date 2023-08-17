@@ -13,6 +13,7 @@
     <script defer src="../../home/header.js"  ></script>
     <script defer src="../../home/footer.js"  ></script>
     <link rel="icon" href="../../logo/msg6276305030-1230560.jpg">
+    <script src="https://kit.fontawesome.com/bf26783359.js" crossorigin="anonymous"></script>
     <script defer src="./app.js"  ></script>    
     <title>Document</title>
 </head>
@@ -135,37 +136,53 @@
         </div>
     </div>
     <main dir="rtl" class="bg-white">
+        <!-- دکمه فیکس پایین -->
+        <div class="position-fixed px-2 align-items-start gap-4 flex-column d-flex bottom-0 w-100" >
+            <div class="w-100 d-flex align-items-center   justify-content-between">
+                <span id="go-up" class="material-symbols-outlined bg-info fw-bold text-white py-1 px-2 rounded-2 pointer">
+                    expand_less
+                    </span>
+                <a href="" style="width: 60px; height: 60px;"  class="d-flex text-decoration-none pointer justify-content-center fw-bold text-white fs-2   align-items-center rounded-circle gradient-bg-green">
+                    <i class="fa-brands fa-whatsapp  "></i>
+                </a>
+            </div>
+            <button class=" rounded-2  w-100 border-0 fw-bold text-white py-2 gradient-bg-green">
+                ثبت نام دوره
+            </button>
+        </div>
         <section class="row py-4  justify-content-center m-0 " >
             <div class=" col-md-11 col-xl-9  py-3" >
-                <!-- تایتل -->
-                <div class="py-2 d-flex align-items-center justify-content-start flex-column gap-2">
-                    <h1 class="fw-bolder rounded-3 text-white p-2 px-4 bg-green">
-                        دوره‌بلند‌مدت‌استادی
-                    </h1>
-                    <h5 class="text-green fw-bold">
-                        اموزش‌ببینید‌آموزش‌بدهید‌و‌کسب‌درآمد‌کنید
-                    </h5>
-                </div>
-                <!-- عکس و نام دوره -->
-                <div class="row flex-row-reverse justify-content-center  m-0 ">
-                    <div class="col-md-6 p-2" >
-                        <video controls src="" poster="./کاور-محصول-خرد-زندگی.jpg" class="w-100 rounded-1" alt="">
+                <div class="animate-up" >
+                    <!-- تایتل -->
+                    <div class="py-2 d-flex align-items-center justify-content-start flex-column gap-2">
+                        <h1 class="fw-bolder rounded-3 text-white p-2 px-4 bg-green">
+                            دوره‌بلند‌مدت‌استادی
+                        </h1>
+                        <h5 class="text-green fw-bold">
+                            اموزش‌ببینید‌آموزش‌بدهید‌و‌کسب‌درآمد‌کنید
+                        </h5>
                     </div>
-                    <div class="col-md-6 d-flex flex-column gap-3 p-lg-3 p-2" >
-
-                        <!-- توضیحات مدرس در اینجا لوپ میخوره -->
-                        <div  class="d-flex w-100  h-100 overflow-auto flex-column gap-2">
-                            <div  class="w-100 py-2 border-bottom d-flex  align-items-center gap-1 ">
-                                <span  class="material-symbols-outlined fw-bold text-green">
-                                    library_add_check
-                                    </span>
-                                    <p  class="m-0">
-                                        نحوه برگزاری: غیرحضوری (از سراسر ایران و جهان)
-                                    </p>
+                    <!-- عکس و نام دوره -->
+                    <div class="row  flex-row-reverse justify-content-center  m-0 ">
+                        <div class="col-md-6 p-2" >
+                            <video controls src="" poster="./کاور-محصول-خرد-زندگی.jpg" class="w-100 rounded-1" alt="">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column gap-3 p-lg-3 p-2" >
+    
+                            <!-- توضیحات مدرس در اینجا لوپ میخوره -->
+                            <div  class="d-flex w-100  h-100 overflow-auto flex-column gap-2">
+                                <div  class="w-100 py-2 border-bottom d-flex  align-items-center gap-1 ">
+                                    <span  class="material-symbols-outlined fw-bold text-green">
+                                        library_add_check
+                                        </span>
+                                        <p  class="m-0">
+                                            نحوه برگزاری: غیرحضوری (از سراسر ایران و جهان)
+                                        </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                   </div>
+                       </div>
+                </div>
                 <!--  تایتل مشاوره -->
                 <div class="py-5 my-5 " >
                     <h4 class="text-green text-center fw-bolder">
@@ -173,7 +190,7 @@
                     </h4>
                 </div>
                 <!--  فرم مشاوره -->
-                <div class="pt-2 pb-4 ">
+                <div id="form-moshavere" class="pt-2  pb-4 ">
                     <form action="#" class="d-flex flex-column gap-3">
                         <div class="py-1  w-100 gap-2 d-flex flex-column " >
                             <label for="contact-us-name" class="text-green fw-bolder" >
@@ -362,38 +379,20 @@
                     </h4>
                 </div>
                 <!--   محل قرارگیری خدمات -->
-                <div class="row m-0 align-items-start  py-3">
+                <div id="khadamat-cnt" class="row m-0 align-items-start  py-3">
                     <!-- لوپ خدمات -->
-                    <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
-                            <p class="m-0" >
+                    <div class="col-md-6   p-2 ">
+                        <div class="bg-green  overflow-hidden  p-2 text-white px-2 rounded-1" >
+                            <p class="m-0 khadamat-card" >
                                 24 جلسه آموزشی
                             </p>
                         </div>
                     </div>
                     <!--  -->
                     <!-- لوپ خدمات -->
-                    <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
-                            <p class="m-0" >
-                                24 جلسه آموزشی
-                            </p>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <!-- لوپ خدمات -->
-                    <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
-                            <p class="m-0" >
-                                24 جلسه آموزشی
-                            </p>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <!-- لوپ خدمات -->
-                    <div class="col-md-6 p-2 ">
-                        <div class="bg-green p-2 text-white px-2 rounded-1" >
-                            <p class="m-0" >
+                    <div class="col-md-6  p-2 ">
+                        <div class="bg-green  overflow-hidden p-2 text-white px-2 rounded-1" >
+                            <p class="m-0 khadamat-card" >
                                 24 جلسه آموزشی
                             </p>
                         </div>
