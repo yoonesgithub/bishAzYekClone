@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../home/styles/global.css">
+    <link rel="stylesheet" href="../../home/styles/utls.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="../../home/header.js"  ></script>
+    <script defer src="../../home/footer.js"  ></script>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../../logo/msg6276305030-1230560.jpg">
+    <script src="https://kit.fontawesome.com/bf26783359.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body  class="bg-light" >
+    <!-- header -->
+    <header class="bg-light"> 
+        <div class="row m-0 justify-content-between px-2 py-2 align-items-center">
+            <div class=" col-7 d-flex p-0 flex-wrap justify-content-between  align-items-center" >
+                <div class="row m-0 p-0 align-items-center justify-content-start  w-100  ">
+                    <div class="col-12 p-0">
+                        <div class="row  w-100 align-items-center  justify-content-start  m-0">
+                            <div class="col-8 col-md-6  header-btn-container col-lg-7 col-xl-4  p-0  d-flex  ">
+                                <a href="#" id="open-basket" class="text-decoration-none d-flex d-none  justify-content-center align-items-center px-2  rounded-1 text-white gradient-bg-green mx-1  " >
+                                    <span  class="material-symbols-outlined text-white header-basket">
+                                        shopping_cart
+                                    </span>
+                                </a>
+                                <a  id="login-enter-btn" href="#" class="text-decoration-none d-block  w-100 " >
+                                    <button class="register-btn w-100  d-flex justify-content-center gap-2 align-items-center  py-1 py-md-2  text-white border-0 rounded-1 gradient-bg-green" >
+                                        <span style="font-size: 1rem;" class="material-symbols-outlined header-user ">
+                                            person_add
+                                            </span>  
+                                            <p    class="fw-bold header-p m-0">
+                                                ورود/ ثبت نام
+                                            </p>
+                                    </button>
+                                </a>
+                            </div>
+                            <div  id="open-search-menu" class="col-2 align-items-center   d-flex justify-content-center">
+                                <span  class="material-symbols-outlined header-search  pointer search-btn hrader-search fw-bold text-green">
+                                    search
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5  d-flex justify-content-end gap-3 align-items-center" >
+                <img class="w-50 w-md-35   pointer" src="https://www.bishtarazyek.com/wp-content/uploads/2021/09/logo.png.webp" alt="">
+                <span id="menu-btn" class="material-symbols-outlined pointer d-lg-none text-green">
+                    menu
+                    </span>
+            </div>
+        </div>
+        <nav  style="display: none;" class="mt-2 w-100 p-0 d-lg-block" >
+            <ul class="list-unstyled  m-0 d-flex flex-column-reverse align-items-end pe-3 rounded-2 bg-green-light flex-lg-row py-2 gap-2  gap-lg-4   bg-lg-transparent justify-content-lg-end " >
+                <li>
+                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/about-us/">درباره‌ و‌ ‌تماس‌باما</a>
+                </li> 
+                <li>
+                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/blog/">مقالات</a>
+                </li>
+                <li>
+                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium  fw-lg-bold fs-lg-5" href="/courses-and-products/">دوره‌ها‌و‌محصولات</a>
+                </li>
+                <li>
+                    <a class="text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/free/index.html">دوره‌های‌رایگان</a>
+                </li>
+                <li>
+                    <a class="text-decoration-none t-300  position-relative text-dark fw-medium fw-lg-bold fs-lg-5" href="/home/index.html">خانه</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- search menu -->
+    <div style="display: none;" id="search-menu" class="w-100 px-15vw vh-100 bg-black bg-opacity-75 fixed-top" >
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center" >
+            <input id="search-input" placeholder=". . . جستجو کردن" class="w-100 fs-bold rounded-2 text-center py-2 fs-1 text-white bg-transparent "  type="text">
+            <span id="close-search-menu" class="material-symbols-outlined pointer position-absolute text-white start-0 top-50 ms-3 fs-4 fw-bold">
+                close
+            </span>
+        </div>
+    </div>
+    <!-- basket -->
+    <div  id="basket-container" style="z-index: 10000;display: none;" class="position-fixed  bg-opacity-50 vh-100 vw-100 top-0 start-0 bg-black">
+        <div id="basket-cover" class="w-100 h-100  row m-0">
+            <div id="basket-menu"  class="h-100 t-500 p-4 col-12  overflow-auto col-md-6 col-lg-4 col-xl-3 bg-white rounded-end  " >
+                <div>
+                    <span id="close-basket" title="بستن‌سبد‌خرید" class="material-symbols-outlined pointer text-danger fw-bold">
+                        remove_shopping_cart
+                        </span>
+                </div>
+                <p class="text-break text-center text-secondary fw-bold">
+                    محصولی‌در‌سبد‌یافت‌نشد
+                </p>
+                <!-- محصولات در اینجا حلقه میخورند -->
+                <div dir="rtl" class="d-flex flex-column  gap-2  pt-3 align-items-center justify-content-start">
+                    <!-- محصول -->
+                    <div class="d-flex flex-column gap-2 px-2 pt-4 pb-2 rounded shadow w-100" >
+                        <div class="d-flex gap-3 w-100 align-items-center justify-content-between">
+                            <img class="w-25" src="" alt="">
+                            <p class="w-75 m-0 " >
+                                بوتکمپ آنلاین fearless | در این دوره، بی‌باک شوید!
+                            </p>
+                        </div>
+                        <hr class="m-0" >
+                        <div style="width: fit-content;" class="fw-bold  m-auto text-center text-secondary opacity-50 " >
+                            <p class="mb-0  text-end " >1</p>
+                            <p  class="text-center m-0">
+                                4,000,000
+                                تومان
+                            </p>
+                        </div>
+                        <div  class="d-flex py-1  align-items-center justify-content-center fs-5 text-secondary  flex-wrap">
+                            <p class="m-0 fw-black" >جمع جز:</p>
+                            <p class="m-0 fw-black" > 4,000,000
+                                تومان</p>
+                        </div>
+                        <hr class="m-0" >
+                        <button class="py-2 border-0  text-white bg-green rounded-1 fw-bold">
+                            تسویه‌حساب
+                        </button>
+                    </div>
+                    <!--  -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- panel content -->
+    <main dir="rtl"  class="min-vh-100   row m-0 justify-content-center align-items-start" >
+        <!-- پنل -->
+        <section class="col-12 p-lg-y-10 p-2  col-md-11 col-lg-10" >
+            <h2 class="fw-bolder text-green pb-3 text-center text-break" >
+                کنترل خشم در نوجوانان | مهارتی کلیدی برای آینده بهتر!
+            </h2>
+
+            <div class=" w-100 row flex-column-reverse flex-md-column flex-lg-row align-items-lg-start  m-0 ">
+                <!-- تبلیغات و دسته بندی -->
+                <div  class="p-0 col-12 flex-column d-flex gap-3  py-3 px-45 col-md-5 col-xl-3 ">
+                    <!-- محل تبلیغ -->
+                    <div  class=" ratio shadow d-flex justify-content-center align-items-center ratio-1x1 bg-white p-2 rounded-3">
+                        <img class="w-100 object-fit-cover" src="./بنر-ساید-بار-وبینار-ارتش-تک-نفره.png" alt="">
+                    </div>
+                    <!-- دسته بندی مطالب -->
+                    <div class="pb-2 rounded-3 bg-white shadow overflow-hidden">
+                        <p class="text-center m-0 py-2 rounded-3 fw-bold text-white gradient-bg-green">
+                            دسته‌بندی‌مطالب
+                        </p>
+                        <ul style="font-size: .8rem;" class="m-0 underline-ul list-unstyled mx-2 mx-lg-3">
+                            <li class="py-2" >
+                                <a class="text-decoration-none text-dark" href="">رشد‌و‌توسعه‌فردی</a>
+                            </li>
+                            <li class="py-2" >
+                                <a class="text-decoration-none text-dark" href="">رشد‌و‌توسعه‌فردی</a>
+                            </li>
+                            <li class="py-2" >
+                                <a class="text-decoration-none text-dark" href="">رشد‌و‌توسعه‌فردی</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- مطالب مرتبط -->
+                    <div class="pb-2 rounded-3 bg-white shadow overflow-hidden">
+                        <p class="text-center m-0 py-2 rounded-3 fw-bold text-white gradient-bg-green">
+                            مطالب‌‌مرتبط‌با‌این‌مقاله
+                        </p>
+                        <ul style="font-size: .8rem;" class="m-0 mt-1  list-unstyled mx-2 mx-lg-3">
+                            <li class="py-1" >
+                                <a class="text-decoration-none text-secondary" href="">رشد‌و‌توسعه‌فردی</a>
+                            </li>
+                            <li class="py-1" >
+                                <a class="text-decoration-none text-secondary" href="">رشد‌و‌توسعه‌فردی</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- جدید ترین مطالب -->
+                    <div class="pb-2 rounded-3 bg-white shadow overflow-hidden">
+                        <p class="text-center m-0 py-2 rounded-3 fw-bold text-white gradient-bg-green">
+                            جدیدترین‌مطالب
+                        </p>
+                        <ul style="font-size: .9rem;" class="m-0 mt-1 underline-ul list-unstyled mx-2 mx-lg-3">
+                            <li class="py-2 row m-0 align-items-start" >
+                                <a href="" class="col-3 col-md-5 col-xl-4">
+                                    <div class="rounded-4 overflow-hidden w-100  ratio ratio-1x1" >
+                                        <img class="w-100 object-fit-cover"  src="./محصولات-آموزش-سخنرانی-در-نمایشگاه-مشهد-100x100.jpg.webp" alt="">
+                                    </div>
+                                </a>
+                                <a class="text-decoration-none text-secondary col-9 col-md-7 col-xl-8" href="">
+                                    محصولات آموزش سخنرانی در نمایشگاه مشهد
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- مقاله -->
+                <div class=" p-3 col-12   col-xl-9 " >
+                    <div>
+                        <!-- سرفصل بازشو  -->
+                        <div>
+                            <!-- باز کننده -->
+                            <div class="open-details-menu text-white gradient-bg-green rounded d-flex align-items-center justify-content-between  pointer py-2  px-3 text-green fw-bolder d-flex">
+                                <h4  class="fw-bolder m-0">
+                                    سرفصل های مهم این مقاله
+                                </h4>
+                                <span class="material-symbols-outlined fs-2 ">
+                                    keyboard_double_arrow_down
+                                    </span>
+                            </div>
+                            <!-- محتوی بازشونده -->
+                            <div  style="display: none;" class=" bg-white  shadow px-2 text-secondary">
+                                <div class="text-break py-4  px-5 ">
+                                    <p style="font-size: .9rem;" class="text-secondary mb-2">
+                                        نوشته های تازه
+                                    </p>
+                                    <ul class="m-0 d-flex list-unstyled flex-column gap-2">
+                                        <li>
+                                            <a  style="font-size: .9rem;" class="text-decoration-none text-primary text-hover-green t-300"  href="#title-1">
+                                                خشم در نوجوانان‌چگونه‌است؟
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- عکس -->
+                        <a href=""  class="my-3 d-block py-2 px-2 px-lg-3 px-xl-5 " >
+                            <img class="w-100 rounded-3" src="./Anger_control_in_adolescents_1-min.jpg" alt="">
+                        </a>
+                        <!-- توضیح زیر عکس -->
+                        <p>
+                            روانشناسان پیشنهاد می‌کنند که روش‌های کنترل خشم در نوجوانان را یاد بگیرید. عدم مدیریت خشم در نوجوانان، می‌تواند منجر به بروز مشکلات در مدرسه، روابط شخصی و به طور کلی آینده آن‌ها شود. بهتر است تا وقتی نوجوان شما تبدیل به جوان نشده است، این روش‌ها را یاد بگیرید. چون اگر خشم آن‌ها از کنترل خارج شود، ممکن است در آینده مشکلات عمیق‌تری هم برای خودشان هم برای جامعه به وجود بیاورند.
+                        </p>
+                        <!-- هدینگ و متن زیر -->
+                        <div class="py-2" >
+                            <h3 id="title-1" class="text-green">
+                                خشم در نوجوانان چگونه‌است؟
+                            </h3>
+                            <p class="text-secondary my-4">
+                                تکنیک‌های مدیریت خشم می‌توانند به ایجاد آگاهی نوجوانان از عصبانیت و چگونگی بهبود توانایی آن‌ها در اجرای مهارت‌های کنترل خود کمک کنند. برای اینکه کنترل خشم در نوجوانان اثربخشی زیادی داشته باشد، باید بدانید در هنگام خشم آن‌ها را سرزنش نکنید تا آن‌ها یاد بگیرند خشمشان را به صورت صحیح و هدایت شده، بروز دهند.
+                            </p>
+                            <!-- متن لینک دار -->
+                            <P >
+                                هدایت و بهبود
+                                <a href="" class="text-green text-decoration-none" > هوش هیجانی</a>
+                                در کودکان و نوجوانان هم به یادگیری بهتر کنترل خشم کمک می‌کند؛ بنابراین بعد از خواندن این مقاله، مقاله «
+                                <a href="" class="text-green text-decoration-none" >هوش هیجانی در کودکان را چطور به مسیر درست هدایت کنیم؟</a>
+                                » را هم مطالعه کنید.
+                            </P>
+                            <!-- لیست -->
+                            <ul class="px-3 px-md-4 flex-column d-flex gap-2 px-xl-5" >
+                                <!-- لوپ محتوی -->
+                                <li>
+                                    <p class="m-0">
+                                        ممکن است دچار افت تحصیلی شود.
+                                    </p>
+                                </li>
+                                <!-- لوپ محتوی -->
+                                <li>
+                                    <p class="m-0">
+                                        نوجوان خشمگین احتمال دارد به بیماری‌های مختلفی دچار شود. از جمله بیماری‌های روان تنی یا سایکوسوماتیک.
+                                    </p>
+                                </li>
+                            </ul>
+                            <!-- پیشنهاد مقاله -->
+                            <div class="rounded-2 py-3 bg-success bg-opacity-25  px-2 px-lg-3">
+                                <p class="fw-bolder text-green-dark mb-3" >
+                                    دو مقاله زیر هم مکمل مقاله حاضر است و می توانید آنها را مطالعه کنید:
+                                </p>
+                                <!-- لینک مقالات -->
+                                <ul class="d-flex px-4  flex-column gap-3  list-unstyled">
+                                    <!-- لوپ لینک ها -->
+                                    <li>
+                                        <a href="" class="text-decoration-none">
+                                            تکنیک و راهکار موثر برای کنترل خشم در محیط کار!!
+                                        </a>
+                                    </li>
+                                    <!-- لوپ لینک ها -->
+                                    <li>
+                                        <a href="" class="text-decoration-none">
+                                            تکنیک و راهکار موثر برای کنترل خشم در محیط کار!!
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="py-3 px-1">
+                            <a href="" >
+                                <img src="./اسلایدر-دوره-کنترل-خشم.jpg" class="w-100 rounded-3" alt="">
+                            </a>
+                            <!-- امتیاز دهی -->
+                            <div class="py-2 d-flex  align-items-center justify-content-end">
+                                <div  class="d-flex flex-row-reverse align-items-center gap-3">
+                                    <div  dir="ltr" class="rating-star star-container  d-flex justify-content-center fs-5  py-2 ">
+                                        <span>
+                                            <i class="fa fa-star text-green" style="font-size: .9rem;" aria-hidden="true" ></i>
+                                            <i class="fa fa-star text-green" style="font-size: .9rem;" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-green" style="font-size: .9rem;" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-green" style="font-size: .9rem;" aria-hidden="true" ></i>
+                                            <i class="fa fa-star-half-o text-green" style="font-size: .9rem;" aria-hidden="true" ></i>
+                                        </span>
+                                    </div>
+                                    <p style="font-size: .9rem;" class="m-0 text-secondary" >
+                                        امتیاز
+                                        <span>
+                                            (
+                                            ۴/۵
+                                            )
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- اشتراک گذاری -->
+                            <div class="py-2 d-flex   align-items-center justify-content-end">
+                                <div class="shadow-sm  py-3  px-5 d-flex align-items-center rounded-1 gap-3 bg-white">
+                                    <p class="m-0 text-green fw-bold" >
+                                        اشتراک بگذاریم
+                                    </p>
+                                    <div class="d-flex align-items-center  gap-3">
+                                        <a href="">
+                                            <i class="fa-brands fa-telegram opacity-50 text-secondary text-hover-green fs-5"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fa-brands fa-whatsapp opacity-50 text-hover-green text-secondary fs-5  "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                        <!-- دیدگاه ها -->
+                <!-- نوشتن دیدگاه -->
+                <div class=" py-4">
+                    <h4 style="overflow-wrap: break-word;" class="text-green-dark fw-bold mb-3" >دیدگاهتان‌را بنویسید</h4>
+                    <form action="#" class="  w-100" id="free-course-form">
+                            <label for="surver-text-area text-secondary w-100 ">دیدگاه*</label>
+                        <textarea required name="surver-text-area" class="w-100 my-2 rounded-2 border border-2 p-2 text-dark" id="surver-text-area" cols="30" rows="10"></textarea>
+                        <div class="d-flex justify-content-start align-items-start  flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3">
+                            <input required type="text" class="border-2 rounded-2 border px-3 py-2 w-75 w-lg-30" placeholder="نام*" >
+                            <input required type="text" class="border-2 border rounded-2 px-3 py-2 w-75 w-lg-30" placeholder="نام‌خانوادگی*" >
+                            <button class="text-white px-4 py-2 gradient-bg-green border-0 rounded-2" >ارسال‌دیدگاه</button>
+                        </div>
+                    </form>
+                    <h5  style="overflow-wrap: break-word;" class="text-dark mt-4  " >
+
+                    </h5>
+                    <!-- دیدگاه های قبل -->
+                    <a href="" class="text-green text-decoration-none  py-2">دیدگاه‌های‌قدیمی‌تر</a>
+                </div>
+                <!-- محل قرار گیری دیدگاه ها     -->
+                <div>
+                    <!-- دیدگاه ها در اینجا حلقه میخورند  -->
+                    <div dir="rtl"  >
+                        <div class="  w-100 d-flex flex-column justify-content-start gap-1 align-items-end mt-4 rounded-3  px-2  py-2" >
+                            <!-- دیدگاه -->
+                            <div class="bg-white pt-5 shadow pb-2 rounded-3 w-100 px-4 " >
+                                <p class="text-dark" >ممنون‌که‌دوره‌هارو‌رایگان‌گذاشتید</p>
+                                <p class="text-start  pointer text-green" >پاسخ</p>
+                            </div>
+                            <!-- پاسخ به دیدگاه -->
+                            <div class="bg-white w-95 shadow py-5 rounded-3 px-4 " >
+                                <p class="fw-bold text-green-dark">پشتیبانی‌بیش‌از‌یک‌‌نفر</p>
+                                <p class="text-dark my-3">
+                                    خوشحالیم که همراهمون هستید و دغدغه آموزش و یادگیری دارید. موفق و بیشتر ازیک نفر باشید.
+                                </p>
+                                <p class="text-start  pointer text-green" >پاسخ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- دکمه دیدگاه های قبل -->
+                <div dir="ltr" class="d-flex  justify-content-end align-items-center">
+                    <a href="" class="text-green text-decoration-none  py-2">دیدگاه‌های‌قدیمی‌تر</a>
+                </div>
+                    </div>
+                </div>
+                 <!-- انتهای محتوی داینامیک -->
+            </div>
+        </section>
+    
+    </main>
+    <!--  -->
+    <!-- footer -->
+    <footer  class="bg-light row m-0  justify-content-center align-items-start pt-5">
+        <div class=" col-11 col-md-10 ">
+            <div class="w-100 m-0  row flex-lg-row-reverse">
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white bg-lg-transparent open-footer-menu position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bolder  pointer fs-5 text-dark" >شبکه های اجتماعی
+                            </p>
+                            <span class="material-symbols-outlined d-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white overflow-hidden  bg-lg-transparent text-center   " >
+                                <ul class="list-unstyled  justify-content-center align-items-center  d-flex flex-row gap-3 my-3">
+                                    <a class="text-decoration-none" href="">
+                                        <li style="width: 50px; height: 50px;" class=" rounded-circle bg-dark text-white d-flex justify-content-center align-items-center" >
+                                            <span class="material-symbols-outlined">
+                                                public
+                                                </span>
+                                        </li>
+                                    </a>
+                                </ul>
+                                <div class=" justify-content-between align-items-start row m-0">
+                                    <img class="col-4" src="../../home/footer/enamad-copy-e1670680559482.png" alt="">
+                                    <img class="col-4" src="../../home/footer/download.svg" alt="">
+                                    <img class="col-4" src="../../home/footer/enamad-copy-e1670680559482.png" alt="">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bolder  pointer text-dark fs-5" >صفحات‌مهم‌سایت
+                            </p>
+                            <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
+                                <ul class="list-unstyled d-flex flex-column gap-4 my-3">
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                    <li>
+                                        <a style="font-size: .9rem;" class="text-decoration-none fw-bolder text-green" href="#">درباره‌و‌تماس‌باما</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bold pointer text-dark fs-5" >آدرس ما
+                            </p>
+                            <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
+                                <h5 class="mt-2 fw-bold" >نشانی دفتر</h5>
+                                <p class="text-green fw-bold" >تهران – سعادت آباد – بلوار دریا – خیابان صراف های جنوبی – خیابان ۲۵ غربی (قره تپه‌ای) – نبش کوچه شادی – پلاک ۱ – طبقه ۵</p>
+                                <div class="d-flex justify-content-center gap-1 align-items-center" >
+                                    <p class="text-green fw-bold" >
+                                        کد پستی: ۱۹۹۸۸۶۷۱۸۶
+                                    </p>
+                                    <p class="text-green fw-bold" >
+                                        <span>تلفن:</span>
+                                        <a class="text-decoration-none text-green" href="tel:02191090908">۰۲۱۹۱۰۹۰۹۰۸</a>
+                                    </p>
+                                </div>
+                                <p class="text-green fw-bold" >ایمیل:site@bishtarazyek.com</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="py-2 bcol-11 col-lg-3 p-2 t-300  " >
+                    <div>
+                        <div class="bg-white open-footer-menu  position-relative py-2 rounded-2 text-center " >
+                            <p dir="rtl" class="m-0 fw-bolder pointer text-dark fs-5" >مجموعه‌های‌همکار
+                            </p>
+                            <span class="material-symbols-outlined d-lg-none footer-menu-icon position-absolute top-0 start-0 mt-3 ms-2">
+                                expand_more
+                                </span>
+                            </div>
+                            <div  class="bg-white  overflow-hidden   text-center footer-menu  " >
+                                <ul class="list-unstyled d-flex flex-column gap-3 my-3">
+                                    <li>
+                                        <a class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                    <li>
+                                        <a  class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                    <li>
+                                        <a  class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                    <li>
+                                        <a  class="text-decoration-none fw-bold text-green" href="#">مشاوره روانشناسی انلاین پل</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 bg-green py-2">
+            <p class="text-center fw-bold fs-5 m-0 text-white">
+                استفاده از سایت مشروط بر قبول توافق‌نامه کاربری و حفظ حریم شخصی است. 
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

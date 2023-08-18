@@ -1,0 +1,8 @@
+@import '../../home/styles/colors';
+.underline-ul {
+    & li {
+        &:not(:last-child)  {
+            border-bottom: 1px solid $green;
+        }
+    }
+}
