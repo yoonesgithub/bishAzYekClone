@@ -1,9 +1,10 @@
 $(document).ready(function () {
     function addnewLink() {
-        let newLink = $("<li></li>").attr("id","file").append(
+        let newLink = $("<li></li>").append(
             $("<a></a>")
                 .addClass("text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5")
                 .attr('href', '/files/index.html')
+                .attr("id","file")
                 .html('فروش فایل')
         );
         $("header ul").prepend(newLink);

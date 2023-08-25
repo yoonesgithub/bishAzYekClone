@@ -50,5 +50,7 @@ $(document).ready(function () {
         $("#files-btn").html(content.btn);
     }
     loadContent(0)
-    $("#file a").addClass('active-link');
+    setTimeout(() => {
+        $("#file").addClass("active-link")
+    }, 1);
 });
