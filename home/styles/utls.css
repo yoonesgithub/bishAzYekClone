@@ -11,14 +11,23 @@
   background: rgb(33, 67, 32);
   background: linear-gradient(90deg, rgb(33, 67, 32) 0%, rgb(46, 129, 37) 51%, rgb(32, 194, 15) 100%);
 }
+.bg-hover-green-light:active {
+  background-color: #20c20f !important;
+}
+.bg-hover-green-light:hover {
+  background-color: #20c20f !important;
+}
+.bg-hover-white:hover {
+  background-color: white !important;
+}
 .bg-green {
   background-color: #20C20F;
 }
 .bg-green-light {
-  background-color: #82f476;
+  background-color: #82f476 !important;
 }
 .bg-green-light-extra {
-  background-color: #d8fcd4;
+  background-color: #d8fcd4 !important;
 }
 @media (min-width: 992px) {
   .bg-lg-transparent {
@@ -91,6 +100,11 @@
     width: 30% !important;
   }
 }
+@media (min-width: 992px) {
+  .w-lg-100 {
+    width: 100%;
+  }
+}
 
 @media (min-width: 992px) {
   .fs-lg-5 {
@@ -117,15 +131,15 @@
 
 .t-300 {
   transition: all linear 300ms;
-  transition-property: color, background-color, transform, max-height;
+  transition-property: color, background-color, transform, max-height, outline, opacity;
 }
 .t-500 {
   transition: all linear 500ms;
-  transition-property: color, background-color, transform, max-height;
+  transition-property: color, background-color, transform, max-height, outline, opacity;
 }
 .t-1000 {
   transition: all linear 1s;
-  transition-property: color, background-color, transform, max-height;
+  transition-property: color, background-color, transform, max-height, outline, opacity;
 }
 
 .start-80 {
@@ -305,6 +319,12 @@
 
 .border-green {
   border: 2px solid #20C20F;
+}
+
+@media (min-width: 992px) {
+  .rounded-lg-4 {
+    border-radius: 1rem !important;
+  }
 }
 
 /*# sourceMappingURL=utls.css.map */

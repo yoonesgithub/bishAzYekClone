@@ -1,0 +1,38 @@
+@media (max-width: 1199px) {
+  #navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100;
+    min-height: 100vh;
+    transform: translateY(-100%);
+  }
+  #navigation.active {
+    transform: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  #navigation {
+    transition: none;
+  }
+}
+
+.active-sub-route {
+  color: #20C20F !important;
+  border-bottom: 2px solid #20C20F;
+}
+
+.comment::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 10px solid;
+  border-color: transparent #8CC3A9 transparent transparent;
+  bottom: 100%;
+  right: 10%;
+  transform: rotate(90deg);
+}
+
+/*# sourceMappingURL=style.css.map */

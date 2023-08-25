@@ -8,11 +8,6 @@
         @content
     }
 };
-@mixin lessmd {
-    @media (max-width: 767px) {
-        @content
-    }
-};
 @mixin lg {
     @media  (min-width: 992px) {
         @content
@@ -23,6 +18,7 @@
         @content
     }
 };
+
 @mixin xxl {
     @media  (min-width: 1400px) {
         @content

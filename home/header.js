@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    function addnewLink() {
+        let newLink = $("<li></li>").attr("id","file").append(
+            $("<a></a>")
+                .addClass("text-decoration-none t-300 position-relative text-dark fw-medium fw-lg-bold fs-lg-5")
+                .attr('href', '/files/index.html')
+                .html('فروش فایل')
+        );
+        $("header ul").prepend(newLink);
+    }
+    addnewLink()
     function checkLogin(isLoggedIn) {
         // با این قطعه کد لاگین بودن یا نبودن یوزر چک میشود و تصمیم میگیریم 
         // به صفحه ثبت نام یا لاگین بریم

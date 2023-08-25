@@ -1,0 +1,8 @@
+.limited-p {
+    display: none;
+}
+@media (max-width:991px) {
+    .less-lg-none {
+        transform: translateY(-100%);
+    }
+}

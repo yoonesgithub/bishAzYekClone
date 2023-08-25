@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../home/styles/global.css">
+    <link rel="stylesheet" href="../../home/styles/utls.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../logo/msg6276305030-1230560.jpg">
+    <script defer src="./app.js"  ></script>    
+    <script defer src="./frame.js"  ></script>    
+    <title>Document</title>
+</head>
+<body dir="rtl" class="bg-light">
+    <main class="position-relative" >
+        <section class="row m-0  min-vh-100">
+            <!-- navigation -->
+            <div id="navigation" class="bg-white t-500 p-0  col-xl-3 top-0 start-0">
+                <div class="d-flex justify-content-between px-2 align-items-center" >
+                    <h5  class="text-green m-0  py-2 px-3"> محتوی دوره</h5>
+                    <span id="close-nav" class="material-symbols-outlined d-xl-none text-danger pointer fs-4">
+                        close
+                    </span>
+                </div>
+                <!-- محل قرار گیری لینک ها -->
+                <div>
+                    <!-- دسته بندی اول -->
+                    <!-- باز کننده -->
+                    <div class="open-details-menu  pointer bg-light py-2 py-xl-3 w-100  d-flex justify-content-between">
+                        <p class="m-0 pe-3" >
+                            فایل های تصویری دوره
+                        </p>
+                        <div class="d-flex align-items-center gap-3">
+                            <small  class="m-0" >
+                                <span>۱</span>
+                                /
+                                <span>۹</span>
+                            </small>
+                            <span class="material-symbols-outlined">
+                                chevron_right
+                                </span>
+                        </div>
+                    </div>
+                    <!-- محتوی بازشونده -->
+                    <div  style="font-size: .9rem; display: none;" class="bg-white  px-2 text-secondary">
+                        <ul class="list-unstyled m-0 py-4 px-2 flex-column d-flex gap-3">
+                            <!-- لوپ لینک ها -->
+                            <li onclick="changeVideoSource('src1')" class="pointer text-secondary">
+                                <div class="d-flex w-100  justify-content-between align-items-center " >
+                                    <div class="d-flex align-items-center  gap-2">
+                                        <span class="material-symbols-outlined">
+                                            youtube_activity
+                                        </span>
+                                        <p class="m-0" >مقدمه: متن به صورت تست</p>
+                                    </div>
+                                    <div dir="ltr" class="d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined">
+                                            radio_button_unchecked
+                                        </span>
+                                        <p class="m-0">
+                                            <span>۰۹</span>
+                                            :
+                                            <span>۴۵</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  -->
+                            <!-- لوپ لینک ها -->
+                            <!-- محتوی تکمیل شده  -->
+                            <!-- در خط ۷۵ تگ کلاس تکست گرین میگیرد -->
+                            <!-- در خط ۸۶ متن داخل ایکون چک سیرکل میشود -->
+                            <li onclick="changeVideoSource('src2')" class="pointer text-green ">
+                                <div class="d-flex w-100  justify-content-between align-items-center" >
+                                    <div class="d-flex align-items-center  gap-2">
+                                        <span class="material-symbols-outlined">
+                                            youtube_activity
+                                        </span>
+                                        <p class="m-0" >مقدمه: متن به صورت تست</p>
+                                    </div>
+                                    <div dir="ltr" class="d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined">
+                                            check_circle
+                                            </span>
+                                        <p class="m-0">
+                                            <span>۰۹</span>
+                                            :
+                                            <span>۴۵</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  -->
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <!-- محتوی -->
+            <div class="col-xl-9   p-0 m-0" >
+                <div class="bg-green text-white d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2 p-3">
+                        <span class="material-symbols-outlined">
+                            arrow_circle_left
+                        </span>
+                        <p class="m-0">
+                            دوره رایگان خِرَد زندگی
+                        </p>
+                    </div>
+                    <div class="d-xl-flex d-none ps-2 align-items-center gap-2">
+                        <small style="font-size: .8rem;" class="m-0">
+                            پیشرفت‌شما:
+                            <span>۰</span>
+                            از
+                            <span>۱۹</span>
+                            (
+                                <span>
+                                    ۰٪
+                                </span>
+                            )
+                        </small>
+                        <button class="border border-white bg-transparent rounded-2 border-2 px-3 py-1 text-white bg-hover-green-light text-hover-green t-300">
+                            علامت‌گذاری‌به‌عنوان‌کامل‌شده
+                        </button>
+                        <div class="d-flex text-hover-green t-300 text-white bg-hover-white p-1 pointer rounded-circle justify-content-center align-items-center ">
+                            <span class="material-symbols-outlined t-300">
+                                close
+                                </span>
+                        </div>
+                    </div>
+                    <span id="open-nav" class="material-symbols-outlined ms-2 d-xl-none">
+                        menu_open
+                    </span>
+                </div>
+                <!-- ویدیو -->
+                <iframe id="video" src="" class="w-100 min-vh-100"  frameborder="0"></iframe>
+                <!--و گفتگو بررسی اجمالی -->
+                <div class="bg-white pt-4  w-100 border-bottom d-flex justify-content-center gap-2">
+                    <div id="open-info" class="d-flex text-secondary pointer p-1 active-sub-route  align-items-center gap-1">
+                        <span class="material-symbols-outlined">
+                            inventory
+                            </span>
+                            <p class="m-0">
+                                بررسی‌اجمالی
+                            </p>
+                    </div>
+                    <div id="open-chat" class="d-flex text-secondary p-1p pointer  align-items-center gap-1">
+                        <span class="material-symbols-outlined">
+                            chat
+                            </span>
+                            <p class="m-0">
+                                نظرات
+                            </p>
+                    </div>
+                </div>
+                <!-- محتوی متغیر -->
+                <div class="bg-white py-3 py-xl-4" >
+                    <!-- درباره دوره -->
+                    <div  id="info" class="text-center  flex-column d-flex gap-2 text-green fw-bold">
+                        <p>درباره درس</p>
+                        <a href="" class="text-decoration-none text-green" >دانلود فایل</a>
+                    </div>
+                    <!-- محتوی گفتگو -->
+                    <div id="chat" class="justify-content-center d-none row m-0 py-0 px-2">
+                        <div class="col-lg-10">
+                            <h5 class="text-green">
+                                به گفتگو بپیوندید
+                            </h5>
+                            <div class="py-4">
+                                <h5 class="fw-bolder text-secondary" >
+                                    پرسش و پاسخ
+                                </h5>
+                                <form action="" class="mt-3 mt-lg-4">
+                                    <textarea class="w-100 p-2 border border-2 rounded-2" name="" id="" cols="30" rows="7"></textarea>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="border-0 gradient-bg-green rounded-2 px-4 py-2 text-white">
+                                            سوال بپرس 
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- کامنت ها -->
+                            <div class="d-flex justify-content-start flex-column gap-3">
+                                <!--  کامنت و فرم بازشو -->
+                                <div  class=" d-flex  flex-column gap-1">
+                                    <div class="d-flex align-items-center  gap-3">
+                                        <div style="width: 50px;height: 50px;" class="rounded-circle  overflow-hidden" >
+                                            <img src="./d41d8cd98f00b204e9800998ecf8427e.png" class="w-100 object-fit-cover" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="m-0 " >یونس  خاتمی</p>
+                                            <small class="text-secondary">۱ ماه قبل</small>
+                                        </div>
+                                    </div>
+                                    <p style="width: fit-content;" class="p-3 m-0 comment position-relative bg-success text-white rounded-3 mt-3 bg-opacity-50" >
+                                        ممنون از دوره خوبتون
+                                    </p>
+                                    <p  class="text-green pointer m-0 text-decoration-none open-form">
+                                        پاسخ
+                                    </p>
+                                    <form style="display: none;" action="" class="mt-2 pasokh-form">
+                                        <textarea class="w-100 p-2 border border-2 rounded-2" name="" id="" cols="30" rows="7"></textarea>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="border-0 gradient-bg-green rounded-2 px-4 py-2 text-white">
+                                                پاسخ  
+                                            </button>
+                                        </div>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

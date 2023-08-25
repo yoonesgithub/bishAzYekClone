@@ -13,6 +13,7 @@ $(document).ready(function () {
             link:"a.html"
         },
     ];
+
     let videos = [
         "./254-how-js-engine-work.mp4",
         "./253-ecma-and-engine.mp4",
@@ -38,6 +39,9 @@ $(document).ready(function () {
     function getPhoto(index) {
         return photos[index] || photos[0];
     }
+    function getFilesPhoto(index) {
+        return filesSlider[index] || filesSlider[0];
+    }
     function getVideo(index) {
         return  {
             content: videos[index]
@@ -50,14 +54,18 @@ $(document).ready(function () {
     let photo;
     function loadSliderContent(id,index,contenLoaderFn) {
         content = contenLoaderFn(index);
-        console.log(content);
         $(id).attr("src", content.content);
         if (content.link) {
            $("#slider-link").attr("href", content.link); 
+        } if(content.title) {
+
+        } if(content.text) {
+
+        } if(content.btn) {
+
         }
     }
     function slideForward(id,contenLoaderFn) {
-        console.log(id);
         (photoIndex++ < getLength(photos)-1) ? photoIndex : photoIndex = 0;
         loadSliderContent(id,photoIndex,contenLoaderFn)
     }
@@ -77,6 +85,4 @@ $(document).ready(function () {
     $("#slide-back-btn-video").click(function () { 
         slideBack("#slider-video",getVideo)
     });
-    loadSliderContent("#slider-img",0,getPhoto)
-    loadSliderContent("#slider-video",0,getVideo)
 });

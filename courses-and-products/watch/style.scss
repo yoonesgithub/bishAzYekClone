@@ -1,0 +1,41 @@
+@import '../../home/styles/mediaQuery';
+@import '../../home/styles/colors';
+@mixin less-xl {
+    @media  (max-width: 1199px) {
+        @content
+    }
+};
+#navigation {
+    @include less-xl {
+       position: fixed;
+       top: 0;
+       left: 0;
+       z-index: 99; 
+       width: 100;
+       min-height: 100vh;
+       transform: translateY(-100%);
+       &.active {
+        transform: none !important;
+       }
+    }
+    @include xl {
+        transition: none;
+    }
+}
+.active-sub-route {
+    color: $green !important;
+    border-bottom: 2px solid $green;
+}
+.comment {
+    &::after {
+      content:"";
+      position:absolute;
+      width:0px;
+      height:0px;
+      border: 10px solid;
+      border-color: transparent #8CC3A9 transparent transparent;
+      bottom: 100%;
+      right: 10%;
+      transform: rotate(90deg);
+    }
+  }

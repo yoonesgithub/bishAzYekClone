@@ -18,15 +18,29 @@
             &:hover {
             @include green-gradient()
             }
+            &-light {
+                &:active {
+            background-color: lighten($color: $green, $amount: 0) !important;
+                }
+                &:hover {
+            background-color: lighten($color: $green, $amount: 0) !important;
+
+                }
+            }
+        }
+        &-white {
+            &:hover {
+                background-color: white !important;
+            }
         }
     }
     &-green {
         background-color: $green;
         &-light {
-            background-color: lighten($color: $green, $amount: 30);
+            background-color: lighten($color: $green, $amount: 30) !important;
         }
         &-light-extra {
-            background-color: lighten($color: $green, $amount: 50);
+            background-color: lighten($color: $green, $amount: 50) !important;
         }
     }
     &-lg {
@@ -121,6 +135,11 @@
                 width: 30% !important;
             }
         }
+        &-100 {
+            @include lg {
+                width: 100%;
+            }
+        }
     }
 }
 .fs {
@@ -156,15 +175,15 @@
 .t {
     &-300 {
         transition: all linear 300ms;
-        transition-property: color, background-color,transform,max-height;
+        transition-property: color, background-color,transform,max-height,outline,opacity;
     }
     &-500 {
         transition: all linear 500ms;
-        transition-property: color, background-color,transform,max-height;
+        transition-property: color, background-color,transform,max-height,outline,opacity;
     }
     &-1000 {
         transition: all linear 1s;
-        transition-property: color, background-color,transform,max-height;
+        transition-property: color, background-color,transform,max-height,outline,opacity;
     }
 }
 .start {
@@ -382,4 +401,13 @@ header {
 }
 .border-green {
     border: 2px solid $green;
+}
+.rounded {
+    &-lg {
+        @include lg {
+            &-4 {
+                border-radius: 1rem !important;
+            }
+        }
+    }
 }
