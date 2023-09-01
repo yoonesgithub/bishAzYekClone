@@ -15,7 +15,6 @@
     <script src="./app.js" defer></script>
     <link rel="icon" href="../../logo/msg6276305030-1230560.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body  class="bg-light" >
@@ -188,13 +187,13 @@
         </div>
     </div>
     <!-- panel content -->
-    <main dir="rtl"  class="min-vh-100  row m-0 justify-content-center align-items-start" >
+    <main dir="rtl"  class="min-vh-100 row m-0 justify-content-center align-items-start" >
         <!-- پنل -->
-        <section class="col-12 p-lg-y-10  p-2  col-md-11 col-lg-10" >
-            <div class=" w-100   row m-0 ">
+        <section class="col-12 p-lg-y-10 p-2  col-md-11 col-lg-10" >
+            <div class=" w-100 row m-0 ">
                 <!-- انتخابگر های محتوی مثل پیشخوان پروفایل سابقه سفارش و ... -->
-                <div class=" col-12 col-md-4 p-0">
-                    <div class="d-flex flex-column  align-items-center justify-content-start" >
+                <div class="p-0  col-12 col-md-4">
+                    <div class="d-flex flex-column align-items-center justify-content-start" >
                         <!-- پروفایل شامل عکس اسم و غیره -->
                         <div class="m-0 w-100 justify-content-center gap-3 row">
                             <div class="bg-white shadow col-12 col-lg-10 col-xl-9   rounded-3" >
@@ -230,7 +229,7 @@
                                             <span class="material-symbols-outlined fw-bold text-green ">
                                                 dashboard
                                                 </span>
-                                            <p class="text-secondary m-0 text-decoration-none" href="/my-account/panel.html">پیشخوان</p>
+                                            <p class="text-secondary m-0 text-decoration-none">پیشخوان</p>
                                         </a>
                                     </li>
                                     <!--  -->
@@ -244,7 +243,7 @@
                                     </li>
                                     <!--  -->
                                     <!--  -->                                                   
-                                    <li class="overflow-hidden rounded-2 bg-white shadow">
+                                    <li class=" overflow-hidden rounded-2 bg-white shadow">
                                         <a class="py-2  text-decoration-none px-3  d-flex justify-content-start align-items-center gap-3" href="/my-account/enrolled/panel.html">
                                             <span class="material-symbols-outlined fw-bold text-green ">
                                                 school
@@ -254,7 +253,7 @@
                                     </li>
                                     <!--  -->
                                     <!--  -->
-                                    <li class="active-link  overflow-hidden rounded-2 bg-white shadow">
+                                    <li class="overflow-hidden rounded-2 bg-white shadow">
                                         <a class="py-2  text-decoration-none px-3  d-flex justify-content-start align-items-center gap-3" href="/my-account/bookmarks/panel.html">
                                             <span class="material-symbols-outlined fw-bold text-green ">
                                                 bookmark
@@ -279,17 +278,17 @@
                                             <span class="material-symbols-outlined fw-bold text-green ">
                                                 shopping_cart
                                                 </span>
-                                            <p class="text-secondary m-0 text-decoration-none">سابقه‌ سفارشات</p>
+                                            <p class="text-secondary m-0 text-decoration-none" >سابقه‌ سفارشات</p>
                                         </a>
                                     </li>
                                     <!--  -->
                                     <!--  -->
-                                    <li class="overflow-hidden rounded-2 bg-white shadow">
-                                        <a  class="py-2  text-decoration-none px-3  d-flex justify-content-start align-items-center gap-3" href="/my-account/ticket/index.html">
+                                    <li class="active-link overflow-hidden rounded-2 bg-white shadow">
+                                        <a class="py-2  text-decoration-none px-3  d-flex justify-content-start align-items-center gap-3" href="#">
                                             <span class="material-symbols-outlined fw-bold text-green ">
                                                 contacts
                                                 </span>
-                                            <p class="text-secondary m-0 text-decoration-none">تیکت پشتیبانی</p>
+                                            <p class="text-secondary m-0 text-decoration-none" >تیکت پشتیبانی</p>
                                         </a>
                                     </li>
                                     <!--  -->
@@ -299,7 +298,7 @@
                                             <span class="material-symbols-outlined fw-bold text-green ">
                                                 call
                                                 </span>
-                                            <p class="text-secondary m-0 text-decoration-none">تغییر‌شماره‌موبایل</p>
+                                            <p class="text-secondary m-0 text-decoration-none" >تغییر‌شماره‌موبایل</p>
                                         </a>
                                     </li>
                                     <!--  -->
@@ -334,86 +333,145 @@
                     </div>
                 </div>
                 <!-- محتوی داینامیک -->
-            <!-- علاقه مندی ها  -->
-            <div class=" p-0 col-12  col-md-8" >
-                <!-- تایتل -->
-                <h5 class="mb-2 px-2">لیست‌علاقه‌مندی‌ها</h5>
-                    <!--  دوره ها  -->
-            <div class="row m-0 " >
-                        <!-- -------- -->
-                                <!-- ------------------- -->
-            <div dir="rtl" class="py-2   position-relative hover-up t-300  col-12 p-2 col-md-6 col-xl-4" >
-                <div class="bg-white shadow overflow-hidden rounded-2" >
-                    <a href="#" class="text-decoration-none">
-                        <img style="object-position: center;" class="object-fit-cover w-100" src="./4383bf32-bb14-4807-aef1-0ff9e58bb1e8.jpeg" alt="">
+
+            <!-- دوره های ثبت نام شده -->
+            <div class=" p-0 col-12 col-md-8" >
+                <!-- تایتل  و افزودن تیکت -->
+                <div class="d-flex py-2 px-1 border-bottom border-2 justify-content-between align-items-center">
+                    <p class="m-0 fw-boldd">
+                        همه تیکت ها
+                    </p>
+                    <a class="text-decoration-none" href="/my-account/send-ticket/index.html">
+                        <button class="px-3 border-0 text-white py-1 pointer rounded-1 gradient-bg-green">ارسال تیکت</button>
                     </a>
-                    <div dir="ltr" class="rating-star  star-container  d-flex justify-content-center fs-5  py-2 ">
-                        <span>
-                            <i class="fa fa-star text-warning" aria-hidden="true" ></i>
-                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                            <i class="fa fa-star text-warning" aria-hidden="true" ></i>
-                            <i class="fa fa-star-half-o text-warning" aria-hidden="true" ></i>
-                        </span>
-                    </div>
-                    <div class=" border-bottom  pb-2 border-2" >
-                        <div class="p-3 pb-2" >
-                            <a href="#" class="text-secondary pb-3 py-1 d-block text-decoration-none fw-bold t-300 text-hover-green text-break" >وبینار ارتش تک نفره 2</a>
-                            <div class="py-2  d-flex gap-3  justify-content-start align-items-center" >
-                                <div class=" w-15" >
-                                    <a href="#" style="width: 40px; height: 40px;" class="rounded-circle  text-white text-decoration-none d-flex pointer justify-content-center align-items-center gradient-bg-green" >
-                                        <p class="m-0 fw-bolder" >با</p>
-                                    </a>
-                                </div>
-                                <div class="w-85" >
-                                    <div class=" w-100 flex-wrap d-flex justify-content-start gap-1 " >
-                                        <p style="font-size: .8rem;" class="text-secondary text-nowrap   m-0">
-                                             توسط
-                                        </p>
-                                        <a style="font-size: .8rem;" href="#" class="text-dark  text-decoration-none text-hover-green" >بیش‌از‌یک‌</a>
-                                    </div>
-                                    <div class=" d-flex  flex-wrap w-100justify-content-start gap-1 " >
-                                        <p style="font-size: .8rem;" class="text-secondary  text-nowrap  m-0">
-                                            دسته بندی
-                                        </p>
-                                        <a style="font-size: .8rem;" href="#" class="text-dark  text-decoration-none text-hover-green" >سوادمالی‌و‌کسب‌‌‌و‌کار</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-3  py-2" >
-                        <div class="d-flex  flex-nowrap gap-1 flex-row flex-md-column flex-lg-row    row-gap-2">
-                            <div class="w-100" >
-                                <del style="font-size: .9rem;" class="text-secondary text-center  w-100 d-block fw-light">
-                                    99,000 تومان
-                                </del>
-                                <p style="font-size: .9rem;" class="text-dark text-center m-0  fw-bolder">
-                                    49,000 تومان
-                                </p>
-                            </div>
-                            <div class="w-100">
-                                <a href="../shop/cart/index.html" class="d-block  text-decoration-none">
-                                    <button style="font-size: .9rem;" class="py-2 px-3 m-auto d-flex gap-2 fw-bold rounded-3 t-300 green-btn align-items-center justify-content-center">
-                                        <span class="material-symbols-outlined">
-                                            shopping_basket
-                                            </span>
-                                        خرید
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="width: 40px;height: 40px;" class="bg-dark m-2 mt-3 position-absolute top-0 rounded-circle bg-opacity-10 d-flex justify-content-center align-items-center pointer text-hover-white  bg-hover-green t-300" >
-                        <span class="material-symbols-outlined t-300">
-                            bookmark
-                            </span>
-                    </div>
                 </div>
-            </div>
-            <!-- ------------------- -->
-                    <!-- -------- -->
-                 
+                <!-- لوگوی تیکت ها و تعداد -->
+                <div  class=" w-100 py-2 py-lg-3 row-gap-2 flex-row-reverse row m-0 justify-content-center px-0">
+                    <div class="col-6  col-md-4 col-lg-3 col-xl-2 px-2">
+                        <div class="bg-white rounded-1 shadow flex-column d-flex gap-1 align-items-center justify-content-start p-2">
+                            <div class="col-6 py-2 position-relative "  >
+                                <img  src="./reqular.jpg" class="w-100"   alt="">
+                            </div>
+                            <p class="m-0" >همه</p>
+                            <p class="m-0" >۰</p>
+                        </div>
+                    </div>
+                    <div class="col-6  col-md-4 col-lg-3 col-xl-2 px-2">
+                        <div class="bg-white rounded-1 shadow flex-column d-flex gap-1 align-items-center justify-content-start p-2">
+                            <div class="col-6 py-2 position-relative "  >
+                                <img  src="./reqular.jpg" class="w-100"   alt="">
+                            </div>
+                            <p class="m-0" >درحال بررسی</p>
+                            <p class="m-0" >۰</p>
+                        </div>
+                    </div>
+                    <div class="col-6  col-md-4 col-lg-3 col-xl-2 px-2">
+                        <div class="bg-white rounded-1 shadow flex-column d-flex gap-1 align-items-center justify-content-start p-2">
+                            <div class="col-6 py-2 position-relative "  >
+                                <img  src="./black.jpg" class="w-100"   alt="">
+                            </div>
+                            <p class="m-0" >پایان یافته</p>
+                            <p class="m-0" >۰</p>
+                        </div>
+                    </div>
+                    <div class="col-6  col-md-4 col-lg-3 col-xl-2 px-2">
+                        <div class="bg-white rounded-1 shadow flex-column d-flex gap-1 align-items-center justify-content-start p-2">
+                            <div class="col-6 py-2 position-relative "  >
+                                <img  src="./green.jpg" class="w-100"   alt="">
+                            </div>
+                            <p class="m-0" >پاسخ‌داده‌شده</p>
+                            <p class="m-0" >۰</p>
+                        </div>
+                    </div>
+                    <div class="col-6  col-md-4 col-lg-3 col-xl-2 px-2">
+                        <div class="bg-white rounded-1 shadow flex-column d-flex gap-1 align-items-center justify-content-start p-2">
+                            <div class="col-6 py-2 position-relative "  >
+                                <img  src="./yellow.jpg" class="w-100"   alt="">
+                            </div>
+                            <p class="m-0" >بسته</p>
+                            <p class="m-0" >۰</p>
+                        </div>
+                    </div>
+                    <div class="col-6  col-md-4 col-lg-3 col-xl-2 px-2">
+                        <div class="bg-white rounded-1 shadow flex-column d-flex gap-1 align-items-center justify-content-start p-2">
+                            <div class="col-6 py-2 position-relative "  >
+                                <img  src="./red.jpg" class="w-100"   alt="">
+                            </div>
+                            <p class="m-0" >باز</p>
+                            <p class="m-0" >۰</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row mx-0 mt-3 mb-2">
+                    <div class="col-lg-3 col-xl-4" >
+                        <p class="fw-bolder text-center text-lg-end m-0" >
+                            نمایش 
+                            <span class="fw-bolder" >0</span>
+                            تیکت
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-xl-8 p-0" >
+                        <div class="row row-gap-2 w-100 m-0 justify-content-lg-end  p-0">
+                            <div class=" col-6 col-lg-3 px-1 py-0" >
+                                <select name="" id="" class="w-100 py-1 border border-2 rounded-2 text-green" >
+                                    <option value="all" selected>
+                                        همه
+                                        <span>(0)</span>
+                                    </option>
+                                    <option value="sent">
+                                        ارسال‌شده
+                                        <span>(0)</span>
+                                    </option>
+                                    <option value="recieved">
+                                        دریافت شده 
+                                        <span>(0)</span>
+                                    </option>
+                                </select>
+                            </div>
+                            <div class=" col-6 col-lg-3 px-1 py-0" >
+                                <select name="" id="" class="w-100 py-1 border border-2 rounded-2 text-green" >
+                                    <option value="all" selected>
+                                        همه
+                                        <span>(0)</span>
+                                    </option>
+                                    <option value="open">
+                                        باز
+                                        <span>(0)</span>
+                                    </option>
+                                    <option value="closed">
+                                        بسته
+                                        <span>(0)</span>
+                                    </option>
+                                    <option value="replied">
+                                        پاسخ‌داده‌شده
+                                        <span>(0)</span>
+                                    </option>
+                                    <option value="ended">
+                                         پایان‌یافته 
+                                        <span>(0)</span>
+                                    </option>
+                                    <option value="pending">
+                                         درحال بررسی 
+                                        <span>(0)</span>
+                                    </option>
+                                </select>
+                            </div>
+                            <div class=" col-6 col-lg-3 px-1 py-0" >
+                                <select name="" id="" class="w-100 py-1 border border-2 rounded-2 text-green" >
+                                    <option value="all" selected>
+                                        تاریخ پاسخ
+                                    </option>
+                                    <option value="sent">
+                                        تاریخ ایجاد
+                                    </option>
+                                </select>
+                            </div>
+                            <div class=" col-6 col-lg-3 px-1 py-0 col-xl-2" >
+                                <button class="w-100 border-0 rounded gradient-bg-green text-white py-1 fw-bold">صافی</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- انتهای محتوی داینامیک -->
